@@ -1,15 +1,11 @@
-import React, {
-  createContext,
-  useEffect,
-  useState
-} from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import _ from 'lodash';
 import { THEMES } from 'src/constants';
 
 const defaultSettings = {
   direction: 'ltr',
   responsiveFontSizes: true,
-  theme: THEMES.ONE_DARK
+  theme: THEMES.LIGHT
 };
 
 export const restoreSettings = () => {
@@ -36,11 +32,13 @@ export const storeSettings = (settings) => {
 
 const SettingsContext = createContext({
   settings: defaultSettings,
-  saveSettings: () => { }
+  saveSettings: () => {}
 });
 
 export const SettingsProvider = ({ settings, children }) => {
-  const [currentSettings, setCurrentSettings] = useState(settings || defaultSettings);
+  const [currentSettings, setCurrentSettings] = useState(
+    settings || defaultSettings
+  );
 
   const handleSaveSettings = (update = {}) => {
     const mergedSettings = _.merge({}, currentSettings, update);
