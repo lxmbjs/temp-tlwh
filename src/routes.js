@@ -5,9 +5,11 @@ import DocsLayout from 'src/layouts/DocsLayout';
 import MainLayout from 'src/layouts/MainLayout';
 import HomeView from 'src/views/home/HomeView';
 import AboutView from 'src/views/about/AboutView';
+import TeamView from 'src/views/team/TeamView';
 import LoadingScreen from 'src/components/LoadingScreen';
 import AuthGuard from 'src/components/AuthGuard';
 import GuestGuard from 'src/components/GuestGuard';
+import RonsStory from './views/rons/RonStoryView';
 
 export const renderRoutes = (routes = []) => (
   <Suspense fallback={<LoadingScreen />}>
@@ -345,6 +347,16 @@ const routes = [
         exact: true,
         path: '/about-us',
         component: AboutView
+      },
+      {
+        exact: true,
+        path: '/our-team',
+        component: TeamView
+      },
+      {
+        exact: true,
+        path: '/rons-story',
+        component: RonsStory
       },
       {
         exact: true,

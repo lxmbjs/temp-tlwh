@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     '& + &': {
       marginLeft: theme.spacing(2)
     },
-    color: '#d3d3d3'
+    color: '#fff'
   },
   divider: {
     width: 1,
@@ -125,6 +125,27 @@ const TopBar = ({ className, ...rest }) => {
           variant="body2"
         >
           About Us
+        </Link>
+
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component={RouterLink}
+          to="/our-team"
+          underline="none"
+          variant="body2"
+        >
+          Our Team
+        </Link>
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component={RouterLink}
+          to="/rons-story"
+          underline="none"
+          variant="body2"
+        >
+          Ron's Story
         </Link>
         <Box flexGrow={1} />
         <Button

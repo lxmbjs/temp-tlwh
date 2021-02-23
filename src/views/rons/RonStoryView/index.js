@@ -2,24 +2,26 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Footer from '../../home/HomeView/Footer';
-import MissionStatement from './MissionStatement';
-import VisionStatement from './VisionStatement';
-import ExecutiveSummary from './ExecutiveSummary';
+import Hero from './Hero';
+import TLWHJourney from './TLWHJourney';
+import VideoSection from './VideoSection';
+import Journals from './Journals';
 const useStyles = makeStyles(() => ({
   root: {}
 }));
 
-const AboutView = () => {
+const RonsStory = () => {
   const classes = useStyles();
 
   return (
     <Page className={classes.root} title="Home">
-      <MissionStatement />
-      <VisionStatement />
-      <ExecutiveSummary />
+      <Hero />
+      <TLWHJourney />
+      <VideoSection />
+      <Journals />
       <Footer />
     </Page>
   );
 };
 
-export default AboutView;
+export default RonsStory;

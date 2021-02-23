@@ -26,7 +26,7 @@ export const restoreSettings = () => {
   return settings;
 };
 
-export const storeSettings = (settings) => {
+export const storeSettings = settings => {
   window.localStorage.setItem('settings', JSON.stringify(settings));
 };
 
