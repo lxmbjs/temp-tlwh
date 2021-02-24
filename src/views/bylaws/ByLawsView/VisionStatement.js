@@ -36,20 +36,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const MissionStatement = ({ className, ...rest }) => {
+const VisionStatement = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Grid container alignItems="center">
-          <Grid item md={6} xs={12}>
-            <img
-              src={'static/images/marketing-site/who-we-are-logo.png'}
-              className={classes.flexImg}
-            />
-          </Grid>
-          <Grid item md={6} xs={12} style={{ paddingLeft: '25px' }}>
+          <Grid item xs={12}>
             <Typography
               component="p"
               variant="overline"
@@ -57,10 +51,10 @@ const MissionStatement = ({ className, ...rest }) => {
               align="left"
               className={classes.subHeader}
             >
-              OUR DEDICATION
+              OUR GOAL
             </Typography>
             <Typography variant="h1" align="left" className={classes.title}>
-              MISSION STATEMENT
+              VISION STATEMENT
             </Typography>
             <hr className={classes.divider} />
             <Typography
@@ -68,8 +62,16 @@ const MissionStatement = ({ className, ...rest }) => {
               align="left"
               className={classes.galleryBody}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              To demonstrate appreciation and gratitude in a meaningful way to
+              those who protect our freedom, by having a two week program
+              instituted by the Armed Services for all military personnel prior
+              to discharge, as well as, making it available to all veterans. The
+              Long Walk Home is instituting a 10 Challenge Mentorship Program.
+              The challenges help us to live a fuller life. If you would like to
+              become a mentor contact Ron for more information. We also aid in
+              other aspects of the transition process that may come up on an
+              individual basis such as getting housing, work, benefits or
+              whatever it is they may need.
             </Typography>
           </Grid>
         </Grid>
@@ -78,8 +80,8 @@ const MissionStatement = ({ className, ...rest }) => {
   );
 };
 
-MissionStatement.propTypes = {
+VisionStatement.propTypes = {
   className: PropTypes.string
 };
 
-export default MissionStatement;
+export default VisionStatement;

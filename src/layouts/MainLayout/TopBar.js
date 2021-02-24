@@ -147,6 +147,36 @@ const TopBar = ({ className, ...rest }) => {
         >
           Ron's Story
         </Link>
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component={RouterLink}
+          to="/events"
+          underline="none"
+          variant="body2"
+        >
+          Events
+        </Link>
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component={RouterLink}
+          to="/faq"
+          underline="none"
+          variant="body2"
+        >
+          FAQ
+        </Link>
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component={RouterLink}
+          to="/by-laws"
+          underline="none"
+          variant="body2"
+        >
+          By Laws
+        </Link>
         <Box flexGrow={1} />
         <Button
           color="default"
