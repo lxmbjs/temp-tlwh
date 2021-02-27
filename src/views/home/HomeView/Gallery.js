@@ -9,7 +9,8 @@ import {
   Grid,
   makeStyles
 } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,21 +20,24 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontWeight: '700',
-    color: '#fff'
+    color: '#fff',
+    textAlign: 'center'
   },
   divider: {
     width: '10%',
     backgroundColor: '#db252f',
     height: '3px',
     border: 'none',
-    marginTop: '10px'
+    margin: '10px auto 0 auto'
   },
   subHeader: {
     fontWeight: 700,
-    color: '#db252f'
+    color: '#db252f',
+    textAlign: 'center'
   },
   galleryBody: {
-    marginTop: '15px'
+    marginTop: '15px',
+    textAlign: 'center'
   }
 }));
 
@@ -43,66 +47,51 @@ const Gallery = ({ className, ...rest }) => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="md">
-        <Grid container alignItems="center">
-          <Grid item md={6} xs={12}>
-            <Typography
-              component="p"
-              variant="overline"
-              color="primary"
-              align="left"
-              className={classes.subHeader}
-            >
-              WHAT WE DO
-            </Typography>
-            <Typography
-              variant="h1"
-              align="left"
-              color="textPrimary"
-              className={classes.title}
-            >
-              OUR GALLERY
-            </Typography>
-            <hr className={classes.divider} />
-            <Typography
-              variant="body1"
-              align="left"
-              className={classes.galleryBody}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
-            </Typography>
-            <Grid container spacing={2}>
-              <Grid item md={6}>
-                <img
-                  src={'static/images/marketing-site/gallery-home-small-1.png'}
-                  style={{ width: '100%', padding: '10px 0' }}
-                />
-              </Grid>
-              <Grid item md={6}>
-                <img
-                  src={'static/images/marketing-site/gallery-home-small-2.png'}
-                  style={{ width: '100%', padding: '10px 0' }}
-                />
-              </Grid>
-            </Grid>
-            <Button
-              variant="contained"
-              color="secondary"
-              size="large"
-              className={classes.ctaButton}
-            >
-              SEE ALL
-            </Button>
-          </Grid>
-          <Grid item md={6} xs={12}>
-            <img
-              src={
-                'static/images/marketing-site/66400314_2492134840810169_8213840021174616064_o.png'
-              }
-              style={{ width: '100%', marginLeft: '25px' }}
-            />
-          </Grid>
-        </Grid>
+        <Typography
+          component="p"
+          variant="overline"
+          color="primary"
+          align="left"
+          className={classes.subHeader}
+        >
+          IN ACTION
+        </Typography>
+        <Typography
+          variant="h1"
+          align="left"
+          color="textPrimary"
+          className={classes.title}
+        >
+          OUR GALLERY
+        </Typography>
+        <hr className={classes.divider} />
+        <Typography
+          variant="body1"
+          align="left"
+          className={classes.galleryBody}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna.
+        </Typography>
+
+        <Splide
+          options={{
+            type: 'loop',
+            width: 'auto',
+            height: 540,
+            perPage: 1,
+            perMove: 1,
+            gap: '1rem',
+            pagination: true
+          }}
+        >
+          <SplideSlide>
+            <img src="/static/images/marketing-site/test-2.png" alt="Image 1" />
+          </SplideSlide>
+          <SplideSlide>
+            <img src="/static/images/marketing-site/test-2.png" alt="Image 2" />
+          </SplideSlide>
+        </Splide>
       </Container>
     </div>
   );

@@ -65,7 +65,7 @@ const Blog = ({ className, ...rest }) => {
         </Typography>
         <Grid
           container
-          diretion="row"
+          direction="row"
           justify="center"
           className={classes.cardSection}
           spacing={2}

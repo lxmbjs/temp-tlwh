@@ -70,6 +70,14 @@ const useStyles = makeStyles(theme => ({
   },
   ctaButton: {
     margin: '25px auto 25px 0'
+  },
+  flexImg: {
+    display: 'block',
+    flex: '0 0 auto',
+    maxWidth: '100%',
+    height: 'auto',
+    width: '100%',
+    margin: 'auto 0 auto auto'
   }
 }));
 
@@ -79,7 +87,7 @@ const Hero = ({ className, ...rest }) => {
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
-        <Grid container spacing={3}>
+        <Grid container spacing={3} alignItems="center">
           <Grid item xs={6}>
             <Box
               display="flex"
@@ -116,7 +124,10 @@ const Hero = ({ className, ...rest }) => {
             </Box>
           </Grid>
           <Grid item xs={6}>
-            <img src="/static/images/marketing-site/member-image.png" />
+            <img
+              src="/static/images/marketing-site/member-image.png"
+              className={classes.flexImg}
+            />
           </Grid>
         </Grid>
       </Container>

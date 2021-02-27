@@ -84,7 +84,7 @@ mock.onGet('/api/reports/earnings').reply(200, {
     datasets: [
       {
         data: [56, 24, 20],
-        backgroundColor: ['#3d72eb', '#4b9e86', '#b658f5']
+        backgroundColor: ['#19426d', '#db252f', '#62b2dd']
       }
     ],
     labels: ['Donations', 'Subscriptions', 'Merchandise']

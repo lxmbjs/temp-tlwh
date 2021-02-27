@@ -29,6 +29,23 @@ const useStyles = makeStyles(theme => ({
   },
   cardSection: {
     marginTop: 50
+  },
+  flexImg: {
+    display: 'block',
+    flex: '0 0 auto',
+    maxWidth: '75%',
+    height: 'auto',
+    margin: 'auto',
+    borderRadius: '3px'
+  },
+  description: {
+    padding: '0 250px',
+    marginTop: 25,
+    textAlign: 'center',
+    color: '#828682'
+  },
+  ctaButton: {
+    margin: '50px auto 25px auto'
   }
 }));
 
@@ -51,6 +68,11 @@ const Team = ({ className, ...rest }) => {
           TEAM
         </Typography>
         <hr className={classes.divider} />
+        <Typography variant="body2" className={classes.description}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris.
+        </Typography>
         <Grid
           container
           direction="row"
@@ -58,15 +80,20 @@ const Team = ({ className, ...rest }) => {
           className={classes.cardSection}
           spacing={4}
         >
-          <Grid item xs={12} md={'auto'}>
-            <TeamCard />
+          <Grid item xs={12}>
+            <img
+              src="/static/images/marketing-site/team-photo.jpg"
+              className={classes.flexImg}
+            />
           </Grid>
-          <Grid item xs={12} md={'auto'}>
-            <TeamCard />
-          </Grid>
-          <Grid item xs={12} md={'auto'}>
-            <TeamCard />
-          </Grid>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            className={classes.ctaButton}
+          >
+            OUR TEAM
+          </Button>
         </Grid>
       </Container>
     </div>

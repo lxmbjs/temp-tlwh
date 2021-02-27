@@ -65,33 +65,6 @@ const TopBar = ({ className, ...rest }) => {
 
   return (
     <AppBar className={clsx(classes.root, className)} color="default" {...rest}>
-      <Toolbar className={classes.toolbarTop}>
-        <FacebookIcon className={classes.socialIcons} />
-        <InstagramIcon className={classes.socialIcons} />
-        <TwitterIcon className={classes.socialIcons} />
-        <Box flexGrow={1} />
-        <Link
-          className={classes.link}
-          color="textSecondary"
-          component={RouterLink}
-          to="/register"
-          underline="none"
-          variant="body2"
-        >
-          REGISTER
-        </Link>
-        <Divider className={classes.divider} />
-        <Link
-          className={classes.link}
-          color="textSecondary"
-          component={RouterLink}
-          to="/login"
-          underline="none"
-          variant="body2"
-        >
-          LOGIN
-        </Link>
-      </Toolbar>
       <Toolbar className={classes.toolbar}>
         <RouterLink to="/">
           <Logo className={classes.logo} />
