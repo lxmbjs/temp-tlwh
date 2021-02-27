@@ -1,19 +1,13 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {
-  Avatar,
-  Box,
-  Card,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Avatar, Box, Card, Typography, makeStyles } from '@material-ui/core';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import Label from 'src/components/Label';
+import CountUp from 'react-countup';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(3),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
@@ -26,6 +20,18 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.contrastText,
     height: 48,
     width: 48
+  },
+  firstBox: {
+    borderRight: '2px solid #db252f'
+  },
+  secondBox: {
+    borderRight: '2px solid #db252f'
+  },
+  lastBox: {
+    marginRight: '10px'
+  },
+  counterTitles: {
+    color: '#db252f'
   }
 }));
 
@@ -41,41 +47,79 @@ const TodaysMoney = ({ className, ...rest }) => {
     <Card
       className={clsx(classes.root, className)}
       {...rest}
+      style={{ background: 'none' }}
     >
-      <Box flexGrow={1}>
-        <Typography
-          component="h3"
-          gutterBottom
-          variant="overline"
-          color="textSecondary"
-        >
-          Todays money
-        </Typography>
-        <Box
-          display="flex"
-          alignItems="center"
-          flexWrap="wrap"
-        >
+      <Box flexGrow={1} className={classes.firstBox}>
+        <div style={{ marginRight: '15px' }}>
           <Typography
-            variant="h3"
-            color="textPrimary"
+            component="h3"
+            gutterBottom
+            variant="overline"
+            color="textSecondary"
+            className={classes.counterTitles}
+            style={{ marginRight: '10px' }}
           >
-            {data.currency}
-            {data.value}
+            Donations
           </Typography>
-          <Label
-            className={classes.label}
-            color={data.difference > 0 ? 'success' : 'error'}
-          >
-            {data.difference > 0 ? '+' : ''}
-            {data.difference}
-            %
-          </Label>
-        </Box>
+          <Box display="flex" alignItems="center" flexWrap="wrap">
+            <Typography
+              variant="h3"
+              color="textPrimary"
+              style={{ color: '#fff' }}
+            >
+              {data.currency}
+              <CountUp end={12000} />
+            </Typography>
+          </Box>
+        </div>
       </Box>
-      <Avatar className={classes.avatar}>
-        <AttachMoneyIcon />
-      </Avatar>
+      <Box flexGrow={1} className={classes.secondBox}>
+        <div style={{ margin: '0 15px' }}>
+          <Typography
+            component="h3"
+            gutterBottom
+            variant="overline"
+            color="textSecondary"
+            className={classes.counterTitles}
+            style={{ marginRight: '10px' }}
+          >
+            Subscriptions
+          </Typography>
+          <Box display="flex" alignItems="center" flexWrap="wrap">
+            <Typography
+              variant="h3"
+              color="textPrimary"
+              style={{ color: '#fff' }}
+            >
+              {data.currency}
+              <CountUp end={30000} />
+            </Typography>
+          </Box>
+        </div>
+      </Box>{' '}
+      <Box flexGrow={1}>
+        <div style={{ marginLeft: '15px' }}>
+          <Typography
+            component="h3"
+            gutterBottom
+            variant="overline"
+            color="textSecondary"
+            className={classes.counterTitles}
+          >
+            Proceeds
+          </Typography>
+          <Box display="flex" alignItems="center" flexWrap="wrap">
+            <Typography
+              variant="h3"
+              color="textPrimary"
+              style={{ color: '#fff' }}
+            >
+              {data.currency}
+              <CountUp end={9000} />
+            </Typography>
+          </Box>
+        </div>
+      </Box>
     </Card>
   );
 };

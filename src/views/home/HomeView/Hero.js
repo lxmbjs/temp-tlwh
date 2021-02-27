@@ -13,10 +13,7 @@ import { autofill } from 'redux-form';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundImage: `url(/static/images/header-image.png)`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundColor: theme.palette.background.dark,
+    backgroundColor: 'fff',
     paddingTop: 200,
     paddingBottom: 200,
     [theme.breakpoints.down('md')]: {
@@ -29,8 +26,8 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   },
   titleBox: {
-    padding: '150px',
-    textAlign: 'center'
+    padding: '150px 0',
+    textAlign: 'left'
   },
   image: {
     perspectiveOrigin: 'left center',
@@ -58,22 +55,21 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontWeight: '700',
-    color: '#fff',
-    fontSize: '32pt'
+    fontSize: '32pt',
+    color: '#19426d'
   },
   whiteText: {
-    color: '#fff',
-    padding: '0 50px'
+    color: '#000'
   },
   divider: {
     width: '10%',
     backgroundColor: '#db252f',
     height: '3px',
     border: 'none',
-    margin: '10px auto 0 auto'
+    margin: '15px auto 0 0'
   },
   ctaButton: {
-    margin: '25px auto 25px auto'
+    margin: '25px auto 25px 0'
   }
 }));
 
@@ -84,7 +80,7 @@ const Hero = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={6}>
             <Box
               display="flex"
               flexDirection="column"
@@ -118,6 +114,9 @@ const Hero = ({ className, ...rest }) => {
                 SIGN UP NOW
               </Button>
             </Box>
+          </Grid>
+          <Grid item xs={6}>
+            <img src="/static/images/marketing-site/member-image.png" />
           </Grid>
         </Grid>
       </Container>

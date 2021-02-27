@@ -2,23 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
-  Box,
+  Avatar,
   Button,
-  Grid,
+  Box,
   Container,
+  Grid,
   Typography,
   makeStyles
 } from '@material-ui/core';
-import BlogCard from './BlogCard';
+import FeaturedCard from './FeaturedCard';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.dark,
-    paddingTop: 128,
-    paddingBottom: 128
+    backgroundColor: theme.palette.background.default,
+    paddingTop: 75,
+    paddingBottom: 75
   },
-  browseButton: {
-    marginLeft: theme.spacing(2)
+  avatar: {
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText
   },
   divider: {
     width: '5%',
@@ -28,18 +30,18 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     marginTop: '10px'
   },
+  subHeader: {
+    fontWeight: 700
+  },
   description: {
     padding: '0 250px',
     marginTop: 25,
     textAlign: 'center',
     color: '#828682'
-  },
-  cardSection: {
-    marginTop: 50
   }
 }));
 
-const Blog = ({ className, ...rest }) => {
+const WeOfferSection = ({ className, ...rest }) => {
   const classes = useStyles();
 
   return (
@@ -52,10 +54,10 @@ const Blog = ({ className, ...rest }) => {
           align="center"
           className={classes.subHeader}
         >
-          NEWS & EVENTS
+          ABOUT US
         </Typography>
         <Typography variant="h1" align="center" color="textPrimary">
-          OUR BLOG
+          WHO WE ARE
         </Typography>
         <hr className={classes.divider} />
         <Typography variant="body2" className={classes.description}>
@@ -63,30 +65,44 @@ const Blog = ({ className, ...rest }) => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris.
         </Typography>
-        <Grid
-          container
-          diretion="row"
-          justify="center"
-          className={classes.cardSection}
-          spacing={2}
-        >
-          <Grid item xs={12} md={4}>
-            <BlogCard />
+        <Box mt={8}>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <FeaturedCard />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <BlogCard />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <BlogCard />
-          </Grid>
-        </Grid>
+        </Box>
       </Container>
     </div>
   );
 };
 
-Blog.propTypes = {
+WeOfferSection.propTypes = {
   className: PropTypes.string
 };
 
-export default Blog;
+export default WeOfferSection;

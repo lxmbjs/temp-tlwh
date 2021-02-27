@@ -2,10 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import Hero from './Hero';
-import Features from './Features';
+import WeOfferSection from './WeOfferSection';
 import Testimonials from './Testimonials';
-import Gallery from './Gallery';
-import Blog from './Blog';
+import Events from './Events';
+// import Blog from './Blog';
 import WhoWeAre from './WhoWeAre';
 import Team from './Team';
 import ContactBar from './ContactBar';
@@ -21,11 +21,11 @@ const HomeView = () => {
   return (
     <Page className={classes.root} title="Home">
       <Hero />
-      <Features />
-      <Gallery />
-      <Testimonials />
-      <Blog />
-      <WhoWeAre />
+      <WeOfferSection />
+      <Events />
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
+      {/* <WhoWeAre /> */}
       <Team />
       <ContactBar />
       <Contact />

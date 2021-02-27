@@ -17,13 +17,14 @@ import Logo from 'src/components/Logo';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import TodaysMoney from 'src/views/reports/DashboardView/TodaysMoney';
 
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default
   },
   toolbar: {
-    height: 128,
+    height: 110,
     backgroundColor: '#19426d'
   },
   toolbarTop: {
@@ -95,15 +96,14 @@ const TopBar = ({ className, ...rest }) => {
         <RouterLink to="/">
           <Logo className={classes.logo} />
         </RouterLink>
-        <Hidden mdDown>
-          <div>
-            <Typography variant="body1">THE LONG WALK HOME</Typography>
-            <Typography variant="body2" style={{ color: '#db252f' }}>
-              WE ARE A NON-PROFIT ORGANIZATION
-            </Typography>
-          </div>
-        </Hidden>
+        <div>
+          <Typography variant="body1">THE LONG WALK HOME</Typography>
+          <Typography variant="body2" style={{ color: '#db252f' }}>
+            WE ARE A NON-PROFIT ORGANIZATION
+          </Typography>
+        </div>
         <Box flexGrow={1} />
+        <TodaysMoney />
       </Toolbar>
       <Toolbar className={classes.toolbarLinks}>
         <Link
