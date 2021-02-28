@@ -9,7 +9,6 @@ import Team from './Team';
 import ContactBar from './ContactBar';
 import Contact from './Contact';
 import Footer from './Footer';
-import Gallery from './Gallery';
 // import Testimonials from './Testimonials';
 // import Blog from './Blog';
 // import WhoWeAre from './WhoWeAre';
@@ -29,7 +28,6 @@ const HomeView = () => {
       {/* <Testimonials /> */}
       {/* <Blog /> */}
       {/* <WhoWeAre /> */}
-      <Gallery />
       <Team />
       <ContactBar />
       <Contact />
