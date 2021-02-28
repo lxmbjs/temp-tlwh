@@ -36,25 +36,26 @@ const useStyles = makeStyles({
     margin: '0 auto 25px auto'
   }
 });
-
-export default function OutlinedCard() {
+const FeaturedCard = props => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
+  const {
+    title = 'Title here',
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+  } = props;
   return (
     <Card className={classes.root} variant="outlined">
       <HealingIcon className={classes.iconClass} />
       <CardContent style={{ textAlign: 'center' }}>
         <Typography variant="h3" component="h2">
-          Lorem Ipsum
+          {title}
         </Typography>
         <Typography
           variant="body2"
           component="p"
           className={classes.cardParagraph}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor.
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
@@ -69,4 +70,6 @@ export default function OutlinedCard() {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default FeaturedCard;

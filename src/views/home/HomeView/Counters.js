@@ -71,7 +71,7 @@ const Counters = () => {
           OUR CONTRIBUTION
         </Typography>
         <Typography variant="h1" align="center" color="textPrimary">
-          WHO WE HELP
+          The Numbers Behind What We Do
         </Typography>
         <hr className={classes.divider} />
 
@@ -87,8 +87,9 @@ const Counters = () => {
                 <Typography variant="h2">The People</Typography>
                 <hr className={classes.subDivider} />
                 <Typography variant="body2" className={classes.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  The long walk home has a variety of programs that support
+                  Veterans and their families. Here are some insights on
+                  Veterans helped, Mentors, and our Donors
                 </Typography>
               </Grid>
               <Grid item xs={12} md={3}>
@@ -101,11 +102,13 @@ const Counters = () => {
                 <Stats title={'Donors'} number={1080} />
               </Grid>
               <Grid item xs={12} md={3}>
-                <Typography variant="h2">The Numbers</Typography>
+                <Typography variant="h2">Fundraising</Typography>
                 <hr className={classes.subDivider} />
                 <Typography variant="body2" className={classes.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  The three categories we raise money for are category 1,
+                  category 2, category 3. 100% of our donations goes towards
+                  helping Veterans make their transition to civilian life. We
+                  take pride on our financial transparency.
                 </Typography>
               </Grid>
               <Grid item xs={12} md={3}>

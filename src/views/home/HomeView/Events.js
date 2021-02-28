@@ -75,8 +75,8 @@ const Events = ({ className, ...rest }) => {
           align="left"
           className={classes.galleryBody}
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna.
+          Learn more about The Long Walk Home’s upcoming events and how you can
+          get involved below.
         </Typography>
         <Grid container alignItems="center">
           <Grid item xs={12}>

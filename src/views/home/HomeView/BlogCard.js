@@ -20,16 +20,21 @@ const useStyles = makeStyles({
   }
 });
 
-const BlogCard = () => {
+const BlogCard = props => {
   const classes = useStyles();
+  const { title, description, link, imageLink } = props;
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea
+        onClick={() => {
+          window.open(link, '_blank', 'noopener,noreferrer');
+        }}
+      >
         <CardMedia
           component="img"
           alt="placeholder"
           height="250"
-          image="/static/images/marketing-site/blog-card-image.png"
+          image={imageLink}
           title="Placeholder"
         />
         <CardContent className={classes.contentRoot}>
@@ -39,11 +44,10 @@ const BlogCard = () => {
             component="h2"
             className={classes.cardTitle}
           >
-            Lorem Ipsum
+            {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>

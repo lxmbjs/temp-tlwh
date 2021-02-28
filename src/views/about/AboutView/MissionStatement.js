@@ -68,8 +68,8 @@ const MissionStatement = ({ className, ...rest }) => {
               align="left"
               className={classes.galleryBody}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna.
+              The Long Walk Home’s mission is to help veterans make the
+              transition from military to civilian life.
             </Typography>
           </Grid>
         </Grid>

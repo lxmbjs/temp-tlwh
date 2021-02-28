@@ -62,16 +62,16 @@ const Team = ({ className, ...rest }) => {
           align="center"
           className={classes.subHeader}
         >
-          OUR
+          OUR HEART AND SOUL
         </Typography>
         <Typography variant="h1" align="center" color="textPrimary">
-          TEAM
+          THE TEAM
         </Typography>
         <hr className={classes.divider} />
         <Typography variant="body2" className={classes.description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris.
+          The Long Walk Home has been mostly a one man show until 2020. Now we
+          have 5 full-time employees and looking to scale even further in 2021.
+          You can learn more about our team and Board Of Directors below.
         </Typography>
         <Grid
           container
@@ -92,7 +92,7 @@ const Team = ({ className, ...rest }) => {
             size="large"
             className={classes.ctaButton}
           >
-            OUR TEAM
+            LEARN MORE
           </Button>
         </Grid>
       </Container>

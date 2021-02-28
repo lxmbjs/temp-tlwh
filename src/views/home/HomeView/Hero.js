@@ -100,17 +100,14 @@ const Hero = ({ className, ...rest }) => {
                 SIGN UP NOW!
               </Typography>
               <Typography variant="h1" className={classes.title}>
-                FOR THOSE WHO CARE FOR
-                <br />
-                OUR VETERANS.
+                Join our movement and help us save 22 lives every day
               </Typography>
               <hr className={classes.divider} />
               <Box mt={3}>
                 <Typography variant="body1" className={classes.whiteText}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris.
+                  Help Veterans make their adjustment from military to civilian
+                  life. We offer direct support for Veterans, Volunteer
+                  opportunities, and VIP treatment for all our donors!
                 </Typography>
               </Box>
               <Button
