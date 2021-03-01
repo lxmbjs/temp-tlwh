@@ -67,14 +67,16 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '35%',
     margin: 'auto'
   },
-  footerItemContainer: {
-    margin: 'auto'
-  },
+
   centerFooterContainer: {
     background: 'white',
     padding: '25px 25px',
     borderRadius: '3px',
-    textAlign: 'center'
+    textAlign: 'center',
+
+    [theme.breakpoints.down('xs')]: {
+      margin: '25px 0'
+    }
   },
   centerFooterImg: {
     margin: 'auto'
@@ -95,10 +97,29 @@ const useStyles = makeStyles(theme => ({
   },
   newsletterSubtext: {
     marginTop: '15px',
-    padding: '0 50px'
+    color: '#db252f'
+  },
+  newsletterSubtext2: {
+    marginTop: '25px',
+    color: '#db252f'
   },
   newsletterContainer: {
     padding: '0 25px'
+  },
+  resourceText: {
+    color: '#fff'
+  },
+  hotline: {
+    color: '#fff',
+    marginBottom: '15px'
+  },
+  resourcesContainer: {
+    textAlign: 'left',
+    padding: '10px 50px',
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+      padding: '0'
+    }
   }
 }));
 
@@ -113,7 +134,7 @@ const Footer = ({ className, ...rest }) => {
             <Grid
               item
               md={4}
-              xs={6}
+              xs={12}
               className={classes.footerItemContainer}
               style={{ textAlign: 'center' }}
             >
@@ -136,7 +157,7 @@ const Footer = ({ className, ...rest }) => {
                 />
               </div>
             </Grid>
-            <Grid item md={4} xs={6} className={classes.footerItemContainer}>
+            <Grid item md={4} xs={12} className={classes.footerItemContainer}>
               <div className={classes.centerFooterContainer}>
                 <img
                   src="/static/images/marketing-site/footer-logo.png"
@@ -146,33 +167,68 @@ const Footer = ({ className, ...rest }) => {
                   variant="body2"
                   className={classes.footerDescripitionCenter}
                 >
-                  Lorem ipsum dolor amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua vero eoset.
+                  Help Veterans make their adjustment from military to civilian
+                  life. We offer direct support for Veterans, Volunteer
+                  opportunities, and VIP treatment for all our donors!
                 </Typography>
                 <div className={classes.socialIconContainer}>
-                  <FacebookIcon className={classes.socialIcons} />
-                  <InstagramIcon className={classes.socialIcons} />
-                  <TwitterIcon className={classes.socialIcons} />
+                  <a
+                    href="https://www.facebook.com/Thelongwalkhomeinc/"
+                    target="_blank"
+                  >
+                    <FacebookIcon className={classes.socialIcons} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/Thelongwalkhomeinc/"
+                    target="_blank"
+                  >
+                    <InstagramIcon className={classes.socialIcons} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/Thelongwalkhomeinc/"
+                    target="_blank"
+                  >
+                    <TwitterIcon className={classes.socialIcons} />
+                  </a>
                 </div>
               </div>
             </Grid>
             <Grid
               item
               md={4}
-              xs={6}
+              xs={12}
               className={classes.footerItemContainer}
               style={{ textAlign: 'center' }}
             >
-              <div className={classes.newsletterContainer}>
-                <Typography variant="h2" style={{ color: 'white' }}>
-                  NEWS AND EVENTS
-                </Typography>
+              <Typography variant="h2" style={{ color: 'white' }}>
+                RESOURCES
+              </Typography>
+              <div className={classes.resourcesContainer}>
                 <Typography
-                  variant="body1"
+                  variant="overline"
                   className={classes.newsletterSubtext}
                 >
-                  We have these upcoming events:
+                  ​VA Suicide Hotline:
+                </Typography>
+                <Typography variant="h4" className={classes.hotline}>
+                  <a href="tel:18002738255" className={classes.resourceText}>
+                    ​1-800-273-TALK (8255)
+                  </a>
+                </Typography>
+                <Typography
+                  variant="overline"
+                  className={classes.newsletterSubtext2}
+                >
+                  ​Veteran's Assistance
+                </Typography>
+                <Typography variant="h4">
+                  <a
+                    href="https://www.veteranscrisisline.net/"
+                    target="_blank"
+                    className={classes.resourceText}
+                  >
+                    ​National VA Call Center
+                  </a>
                 </Typography>
               </div>
             </Grid>

@@ -11,6 +11,8 @@ import {
   makeStyles
 } from '@material-ui/core';
 import SponsorCard from './SponsorCard';
+import PaymentIcon from '@material-ui/icons/Payment';
+import EventIcon from '@material-ui/icons/Event';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -54,7 +56,7 @@ const SponsorSection = ({ className, ...rest }) => {
           align="center"
           className={classes.subHeader}
         >
-          HOST AN EVENT OR SPONSOR US
+          EVENTS & SponsorshipS
         </Typography>
         <Typography variant="h1" align="center" color="textPrimary">
           GET INVOVLED
@@ -63,10 +65,22 @@ const SponsorSection = ({ className, ...rest }) => {
         <Box mt={8}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
-              <SponsorCard />
+              <SponsorCard
+                icon={EventIcon}
+                title="Host an Event"
+                desc="If you are interested in hosting an event with or for The Long Walk Home click below!"
+                link=""
+                ctaText="Learn More"
+              />
             </Grid>
             <Grid item xs={12} md={6}>
-              <SponsorCard />
+              <SponsorCard
+                icon={PaymentIcon}
+                title="Sponsor Us"
+                desc="Interested in becoming a sponsor, click below to request more information."
+                link=""
+                ctaText="Learn More"
+              />
             </Grid>
           </Grid>
         </Box>

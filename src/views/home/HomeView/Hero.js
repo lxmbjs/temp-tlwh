@@ -14,11 +14,13 @@ import { autofill } from 'redux-form';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: 'fff',
-    paddingTop: 200,
-    paddingBottom: 200,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.up('sm')]: {
       paddingTop: 60,
       paddingBottom: 60
+    },
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 25,
+      paddingBottom: 25
     }
   },
   technologyIcon: {
@@ -26,7 +28,6 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   },
   titleBox: {
-    padding: '150px 0',
     textAlign: 'left'
   },
   image: {
@@ -78,6 +79,18 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     width: '100%',
     margin: 'auto 0 auto auto'
+  },
+  item1: {
+    order: 1,
+    [theme.breakpoints.down('xs')]: {
+      order: 2
+    }
+  },
+  item2: {
+    order: 2,
+    [theme.breakpoints.down('xs')]: {
+      order: 1
+    }
   }
 }));
 
@@ -88,7 +101,7 @@ const Hero = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="lg">
         <Grid container spacing={3} alignItems="center">
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} className={classes.item1}>
             <Box
               display="flex"
               flexDirection="column"
@@ -114,13 +127,16 @@ const Hero = ({ className, ...rest }) => {
                 variant="contained"
                 color="secondary"
                 size="large"
+                component="a"
+                href="https://www.flipcause.com/secure/cause_pdetails/MTA3Mjg1"
+                target="_blank"
                 className={classes.ctaButton}
               >
-                SIGN UP NOW
+                SIGN UP
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6} className={classes.item2}>
             <img
               src="/static/images/marketing-site/member-image.png"
               className={classes.flexImg}

@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    boxShadow: 'none'
   },
   label: {
     marginLeft: theme.spacing(1)
@@ -96,7 +97,7 @@ const TodaysMoney = ({ className, ...rest }) => {
             </Typography>
           </Box>
         </div>
-      </Box>{' '}
+      </Box>
       <Box flexGrow={1}>
         <div style={{ marginLeft: '15px' }}>
           <Typography

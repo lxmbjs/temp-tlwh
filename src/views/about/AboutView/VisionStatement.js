@@ -1,21 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {
-  Avatar,
-  Box,
-  Container,
-  Typography,
-  Grid,
-  makeStyles
-} from '@material-ui/core';
-import Button from '@material-ui/core/Button';
+import { Container, Typography, Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
-    paddingTop: 128,
-    paddingBottom: 128
+    backgroundColor: '#19426d',
+    paddingTop: 50,
+    paddingBottom: 50
   },
   title: {
     fontWeight: '700',
@@ -26,14 +18,23 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#db252f',
     height: '3px',
     border: 'none',
-    marginTop: '10px'
+    marginTop: '10px',
+    marginBottom: '25px'
   },
   subHeader: {
     fontWeight: 700,
     color: '#db252f'
   },
   galleryBody: {
-    marginTop: '15px'
+    marginTop: '15px',
+    color: '#fff'
+  },
+  flexImg: {
+    display: 'block',
+    flex: '0 0 auto',
+    maxWidth: '75%',
+    height: 'auto',
+    width: '100%'
   }
 }));
 
@@ -54,12 +55,7 @@ const VisionStatement = ({ className, ...rest }) => {
             >
               OUR GOAL
             </Typography>
-            <Typography
-              variant="h1"
-              align="left"
-              color="textPrimary"
-              className={classes.title}
-            >
+            <Typography variant="h1" align="left" className={classes.title}>
               VISION STATEMENT
             </Typography>
             <hr className={classes.divider} />

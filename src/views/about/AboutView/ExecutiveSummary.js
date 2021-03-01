@@ -25,7 +25,6 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700
   },
   description: {
-    padding: '0 50px',
     marginTop: 25
   }
 }));
@@ -35,7 +34,7 @@ const ExecutiveSummary = ({ className, ...rest }) => {
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Typography
           component="p"
           variant="overline"

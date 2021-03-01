@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
     },
     '& label': {
       color: '#19426d'
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
     }
   },
   textInput: {

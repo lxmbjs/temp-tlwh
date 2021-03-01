@@ -34,10 +34,13 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700
   },
   description: {
-    padding: '0 250px',
+    padding: '0 200px',
     marginTop: 25,
     textAlign: 'center',
-    color: '#828682'
+    color: '#828682',
+    [theme.breakpoints.down('md')]: {
+      padding: 0
+    }
   }
 }));
 

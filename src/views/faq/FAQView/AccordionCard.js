@@ -15,7 +15,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const AccordionCard = ({ accordionQuestion = 'Question' }) => {
+const AccordionCard = ({
+  accordionQuestion = 'Question',
+  accordionAnswer = 'Answer'
+}) => {
   const classes = useStyles();
   return (
     <Grid item xs={12} md={6}>
@@ -29,10 +32,7 @@ const AccordionCard = ({ accordionQuestion = 'Question' }) => {
           {accordionQuestion}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+          <Typography variant="body2">{accordionAnswer}</Typography>
         </AccordionDetails>
       </Accordion>
     </Grid>

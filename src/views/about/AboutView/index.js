@@ -5,6 +5,8 @@ import Footer from '../../home/HomeView/Footer';
 import MissionStatement from './MissionStatement';
 import InTheNews from './InTheNews';
 import ExecutiveSummary from './ExecutiveSummary';
+import VisionStatement from './VisionStatement';
+import ByLaws from './ByLaws';
 const useStyles = makeStyles(() => ({
   root: {}
 }));
@@ -16,7 +18,9 @@ const AboutView = () => {
     <Page className={classes.root} title="Home">
       <MissionStatement />
       <InTheNews />
+      <VisionStatement />
       <ExecutiveSummary />
+      <ByLaws />
       <Footer />
     </Page>
   );

@@ -6,7 +6,10 @@ import { Container, Typography, Grid, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 50,
-    paddingBottom: 50
+    paddingBottom: 50,
+    [theme.breakpoints.down('xs')]: {
+      padding: '25px 0'
+    }
   },
   title: {
     fontWeight: '700',
@@ -32,7 +35,10 @@ const useStyles = makeStyles(theme => ({
     flex: '0 0 auto',
     maxWidth: '75%',
     height: 'auto',
-    width: '100%'
+    width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      margin: 'auto'
+    }
   }
 }));
 
@@ -43,13 +49,13 @@ const MissionStatement = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="md">
         <Grid container alignItems="center">
-          <Grid item md={6} xs={12}>
+          <Grid item sm={6} xs={12}>
             <img
               src={'static/images/marketing-site/who-we-are-logo.png'}
               className={classes.flexImg}
             />
           </Grid>
-          <Grid item md={6} xs={12} style={{ paddingLeft: '25px' }}>
+          <Grid item sm={6} xs={12}>
             <Typography
               component="p"
               variant="overline"

@@ -46,7 +46,11 @@ const useStyles = makeStyles(theme => ({
   contactBoxMiddle: {
     padding: '25px 0',
     borderLeft: '1px solid rgba(255,255,255, 0.1)',
-    borderRight: '1px solid rgba(255,255,255, 0.1)'
+    borderRight: '1px solid rgba(255,255,255, 0.1)',
+    [theme.breakpoints.down('sm')]: {
+      borderLeft: 'none',
+      borderRight: 'none'
+    }
   },
   contactBoxText: {
     position: 'absolute',
@@ -92,7 +96,12 @@ const ContactBar = ({ className, ...rest }) => {
                 Email
               </Typography>
               <Typography variant="h3" className={classes.contactBoxTitle}>
-                help@thelongwalkhome.com
+                <a
+                  href="mailto:help@thelongwalkhome.com"
+                  style={{ color: '#fff' }}
+                >
+                  help@thelongwalkhome.com
+                </a>
               </Typography>
             </div>
           </Grid>
@@ -103,7 +112,9 @@ const ContactBar = ({ className, ...rest }) => {
                 Call Us
               </Typography>
               <Typography variant="h3" className={classes.contactBoxTitle}>
-                (305) 399-5354
+                <a href="tel:+13053995354" style={{ color: '#fff' }}>
+                  (305) 399-5354
+                </a>
               </Typography>
             </div>
           </Grid>

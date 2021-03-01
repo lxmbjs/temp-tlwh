@@ -12,7 +12,7 @@ import GuestGuard from 'src/components/GuestGuard';
 import RonsStory from './views/rons/RonStoryView';
 import Events from './views/events/EventsView';
 import FAQView from './views/faq/FAQView';
-import ByLawsView from './views/bylaws/ByLawsView';
+
 export const renderRoutes = (routes = []) => (
   <Suspense fallback={<LoadingScreen />}>
     <Switch>
@@ -369,11 +369,6 @@ const routes = [
         exact: true,
         path: '/faq',
         component: FAQView
-      },
-      {
-        exact: true,
-        path: '/by-laws',
-        component: ByLawsView
       },
       {
         exact: true,

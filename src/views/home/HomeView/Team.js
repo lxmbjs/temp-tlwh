@@ -28,7 +28,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: '10px'
   },
   cardSection: {
-    marginTop: 50
+    marginTop: 50,
+    [theme.breakpoints.down('xs')]: {
+      marginTop: 25
+    }
   },
   flexImg: {
     display: 'block',
@@ -36,16 +39,25 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '75%',
     height: 'auto',
     margin: 'auto',
-    borderRadius: '3px'
+    borderRadius: '3px',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: '100%'
+    }
   },
   description: {
     padding: '0 250px',
     marginTop: 25,
     textAlign: 'center',
-    color: '#828682'
+    color: '#828682',
+    [theme.breakpoints.down('md')]: {
+      padding: 0
+    }
   },
   ctaButton: {
-    margin: '50px auto 25px auto'
+    margin: '50px auto 25px auto',
+    [theme.breakpoints.down('xs')]: {
+      margin: '25px auto 25px auto'
+    }
   }
 }));
 
@@ -89,6 +101,8 @@ const Team = ({ className, ...rest }) => {
           <Button
             variant="contained"
             color="secondary"
+            component="a"
+            href="/our-team"
             size="large"
             className={classes.ctaButton}
           >

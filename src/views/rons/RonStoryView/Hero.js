@@ -14,7 +14,10 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 50,
-    paddingBottom: 50
+    paddingBottom: 50,
+    [theme.breakpoints.down('xs')]: {
+      padding: '25px 0px'
+    }
   },
   title: {
     fontWeight: '700',
@@ -40,7 +43,10 @@ const useStyles = makeStyles(theme => ({
     flex: '0 0 auto',
     maxWidth: '75%',
     height: 'auto',
-    width: '100%'
+    width: '100%',
+    [theme.breakpoints.down('xs')]: {
+      margin: 'auto'
+    }
   }
 }));
 
@@ -92,11 +98,10 @@ const Hero = ({ className, ...rest }) => {
               align="left"
               className={classes.galleryBody}
             >
-              The Long Walk Home is dedicated to enhancing the dignity, honor
-              and quality of life of our service men and women by providing a
-              comprehensive program of re-entry services related to medical and
-              mental health, re-socialization, personal finance and career
-              development.
+              We are dedicated to enhancing the dignity, honor and quality of
+              life of our service men and women by providing a comprehensive
+              program of re-entry services related to medical and mental health,
+              re-socialization, personal finance and career development.
             </Typography>
           </Grid>
         </Grid>

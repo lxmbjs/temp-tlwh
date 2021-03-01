@@ -54,12 +54,7 @@ const VideoSection = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="md">
         <Grid container alignItems="center">
-          <Grid
-            item
-            xs={12}
-            style={{ paddingLeft: '25px' }}
-            alignContent="center"
-          >
+          <Grid item xs={12} alignContent="center">
             <Typography
               component="p"
               variant="overline"
@@ -80,10 +75,10 @@ const VideoSection = ({ className, ...rest }) => {
               align="left"
               className={classes.galleryBody}
             >
-              Ron founded The Long Walk Home in 2006 and immediately after,
-              walked the Appalachian Trail barefoot in 2006 to 2007 to create
-              awareness for PTSD. This became his penance to forgiving himself
-              for sitting on his hands, blaming others for 33 years.
+              Before founding The Long Walk Home, Ron owned a gym and scuba shop
+              for 28 years. After serving in the Marine Corps, exercise and
+              breath work was crucial in healing Ron's recovery after the war.
+              These are practices he still promotes to this day.
             </Typography>
 
             <Typography
@@ -91,38 +86,30 @@ const VideoSection = ({ className, ...rest }) => {
               align="left"
               className={classes.galleryBody}
             >
-              After his Appalachian Trail hike, he decided to walk barefoot
-              across the United States. Ron saw his politicians were not doing
-              enough, so he decided to step forward – He brought a petition with
-              over 10,000 signatures asking for mandatory counseling for all
-              military personnel prior to discharging and brought it to
-              Washington. While there he learned you don’t tell them what to do,
-              you go there asking for help in what you are doing. We are the
-              change, not our politicians who are just a reflection of us.
+              In 2006, Ron embarked on his first barefoot walk to raise
+              awareness for victims of PTSD. Covering the entire length of the
+              Appalachian Trail, Ron would stop and speak to fellow trailblazers
+              about his mission. He was shocked to find just how many veterans
+              and family members had been scarred by the effects of war. That
+              same year, Ron established this organization.
             </Typography>
             <Typography
               variant="body1"
               align="left"
               className={classes.galleryBody}
             >
-              Throughout the 14 years, Ron has also run events for Vets, hosted
-              mindfulness programs, paid for 1-on-1 counseling, paid rent, food,
-              housing, other general expenses for Vets that needed immediate
-              support, and much more. He also supported the launch of a local
-              shelter for homeless Veterans where he discovered that almost 80%
-              of the homeless are children of Veterans.
-            </Typography>
-            <Typography
-              variant="body1"
-              align="left"
-              className={classes.galleryBody}
-            >
-              Now he is taking his experiences to lead a movement of supporters
-              for Veterans online through the group MilitaryToCivilianLife; A
-              community of Veterans, family members, and supporters who are the
-              change; supporting Veterans adjusting from military to civilian
-              life. Offering Giveaways, Contests, Events, Livestreams, free
-              services & more for Vets!
+              Ron took on an even more daunting task in 2010—walking barefoot
+              across the entire country. Carrying a sign that read "18 Vets a
+              Day Commit Suicide", Ron would walk 3,400 miles from Concord, MA
+              to Santa Monica, CA. His journey became a national sensation,
+              garnering the attention of every city and town he passed. Veterans
+              would approach him daily to show appreciation for his efforts.
+              Mothers would stop him in the street to tell him stories about how
+              they lost their child to war or suicide. It wouldn't be long
+              before Ron's journey would catch the attention of politicians in
+              Washington. While he had been critical of this country’s elected
+              officials for most of his life, he eventually realized that he was
+              in no position to complain unless he took action.
             </Typography>
             <img
               src="/static/images/marketing-site/journey-map.png"

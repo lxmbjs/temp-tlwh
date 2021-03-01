@@ -2,12 +2,8 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,30 +36,46 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
     height: 'auto',
     margin: 'auto'
+  },
+  ctaButton: {
+    marginTop: '15px'
   }
 }));
 
-const EventCard = () => {
+const EventCard = ({ title, date, link, imageLink, desc }) => {
   const classes = useStyles();
   const theme = useTheme();
+
+  console.log(link);
 
   return (
     <Card className={classes.root}>
       <div className={classes.details}>
-        <img
-          src="/static/images/marketing-site/event-example.jpg"
-          className={classes.flexImg}
-        />
+        <img src={imageLink} className={classes.flexImg} />
         <CardContent className={classes.content}>
           <Typography variant="h3" color="primary">
-            Entry #2
+            {title}
           </Typography>
           <Typography variant="overline" color="secondary">
-            Feb. 12, 2021
+            {date}
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
-            Event Details, link to facebook, etc
+            {desc}
           </Typography>
+          {link !== undefined ? (
+            <Button
+              component="a"
+              href={link}
+              target="_blank"
+              variant="contained"
+              color="secondary"
+              className={classes.ctaButton}
+            >
+              Sign Up
+            </Button>
+          ) : (
+            ''
+          )}
         </CardContent>
       </div>
     </Card>

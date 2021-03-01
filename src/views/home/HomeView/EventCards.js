@@ -1,23 +1,30 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
+import { Button } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex',
     marginBottom: '25px'
   },
   details: {
+    flex: '1 0 auto',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
-  content: {
-    flex: '1 0 auto'
+  content: {},
+  ctaContainer: {
+    flex: '1 0 auto',
+    textAlign: 'right',
+    marginRight: '25px'
   },
   cover: {
-    width: 255
+    width: 190
   },
   controls: {
     display: 'flex',
@@ -32,35 +39,68 @@ const useStyles = makeStyles(theme => ({
   flexImg: {
     display: 'block',
     flex: '0 0 auto',
-    maxWidth: '25%',
+    width: '100%',
     height: 'auto',
     margin: 'auto'
+  },
+  ctaButton: {
+    textAlign: 'right',
+    paddingRight: '25px'
+  },
+  imgContainer: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'none'
+    }
   }
 }));
 
-const EventCards = () => {
+const EventCards = ({ title, date, link, imageLink, over }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardMedia
-        className={classes.cover}
-        image="/static/images/marketing-site/event-example.jpg"
-        title="Event Image 1"
-      />
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography variant="h3" color="primary">
-            Entry #2
-          </Typography>
-          <Typography variant="overline" color="secondary">
-            Feb. 12, 2021
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Event Details, link to facebook, etc
-          </Typography>
-        </CardContent>
-      </div>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          style={{
+            backgroundImage: `url(${imageLink})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}
+          className={classes.imgContainer}
+        ></Grid>
+        <Grid item xs={12} sm={8}>
+          <Grid container alignItems="center">
+            <Grid item xs={8}>
+              <CardContent className={classes.content}>
+                <Typography variant="h3" color="primary">
+                  {title}
+                </Typography>
+                <Typography variant="overline" color="secondary">
+                  {date}
+                </Typography>
+                <Typography variant="body2">
+                  Lorem ipsum, test paragraph description for event.
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid item xs={4} className={classes.ctaButton}>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                component="a"
+                href={link}
+                target="_blank"
+              >
+                {over ? 'View' : 'Sign Up'}
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </Card>
   );
 };

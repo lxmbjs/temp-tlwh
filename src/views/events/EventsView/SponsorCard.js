@@ -5,7 +5,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import HealingIcon from '@material-ui/icons/Healing';
 
 const useStyles = makeStyles({
   root: {
@@ -37,24 +36,23 @@ const useStyles = makeStyles({
   }
 });
 
-export default function SponsorCard() {
+const SponsorCard = props => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
-
+  const Icon = props.icon;
+  const { title, desc, link, ctaText } = props;
   return (
     <Card className={classes.root} variant="outlined">
-      <HealingIcon className={classes.iconClass} />
+      <Icon className={classes.iconClass} />
       <CardContent style={{ textAlign: 'center' }}>
         <Typography variant="h3" component="h2">
-          Lorem Ipsum
+          {title}
         </Typography>
         <Typography
           variant="body2"
           component="p"
           className={classes.cardParagraph}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor.
+          {desc}
         </Typography>
       </CardContent>
       <CardActions>
@@ -64,9 +62,10 @@ export default function SponsorCard() {
           size="large"
           className={classes.ctaButton}
         >
-          Read More
+          {ctaText}
         </Button>
       </CardActions>
     </Card>
   );
-}
+};
+export default SponsorCard;

@@ -6,17 +6,12 @@ import {
   AppBar,
   Box,
   Button,
-  Divider,
   Toolbar,
-  Hidden,
   Typography,
   Link,
   makeStyles
 } from '@material-ui/core';
 import Logo from 'src/components/Logo';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import TodaysMoney from 'src/views/reports/DashboardView/TodaysMoney';
 
 const useStyles = makeStyles(theme => ({
@@ -41,9 +36,10 @@ const useStyles = makeStyles(theme => ({
     height: 'auto'
   },
   link: {
+    fontSize: '18px',
     fontWeight: theme.typography.fontWeightMedium,
     '& + &': {
-      marginLeft: theme.spacing(2)
+      marginLeft: theme.spacing(5)
     },
     color: '#fff'
   },
@@ -70,9 +66,11 @@ const TopBar = ({ className, ...rest }) => {
           <Logo className={classes.logo} />
         </RouterLink>
         <div>
-          <Typography variant="body1">THE LONG WALK HOME</Typography>
+          <Typography variant="body1" style={{ fontWeight: '700' }}>
+            THE LONG WALK HOME
+          </Typography>
           <Typography variant="body2" style={{ color: '#db252f' }}>
-            WE ARE A NON-PROFIT ORGANIZATION
+            NON-PROFIT ORGANIZATION
           </Typography>
         </div>
         <Box flexGrow={1} />
@@ -140,23 +138,16 @@ const TopBar = ({ className, ...rest }) => {
         >
           FAQ
         </Link>
-        <Link
-          className={classes.link}
-          color="textSecondary"
-          component={RouterLink}
-          to="/by-laws"
-          underline="none"
-          variant="body2"
-        >
-          By Laws
-        </Link>
+
         <Box flexGrow={1} />
         <Button
           color="default"
           component="a"
-          href="https://material-ui.com/store/items/devias-kit-pro"
+          href="https://www.flipcause.com/secure/cause_pdetails/Mzg4NzM="
+          target="_blank"
+          color="primary"
           variant="contained"
-          size="small"
+          size="large"
         >
           DONATE NOW
         </Button>

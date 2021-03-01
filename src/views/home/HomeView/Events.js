@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import EventCards from './EventCards';
+import { Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,7 +40,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: '15px',
     marginBottom: '25px',
     textAlign: 'center',
-    padding: '0 50px'
+    padding: '0 50px',
+    [theme.breakpoints.down('xs')]: {
+      padding: 0
+    }
   },
   ctaButton: {
     margin: 'auto'
@@ -80,11 +84,36 @@ const Events = ({ className, ...rest }) => {
         </Typography>
         <Grid container alignItems="center">
           <Grid item xs={12}>
-            <EventCards />
-            <EventCards />
-            <EventCards />
+            <EventCards
+              title="Battle Of The Branches Axe Throwing Tournament"
+              date="Mar. 17, 2021"
+              link="https://www.flipcause.com/secure/cause_pdetails/MTA5MDc0"
+              imageLink={'/static/images/marketing-site/event-example.jpg'}
+            />
+            <EventCards
+              title="Axe Throwing For Veterans"
+              date="Jan. 26, 2021"
+              over={true}
+              link="https://www.facebook.com/events/1292436267800005/"
+              imageLink={'/static/images/marketing-site/event-2.jpg'}
+            />
+            <EventCards
+              title="Veteran's Day Bike Ride"
+              date="Nov. 14, 2020"
+              over={true}
+              link="https://www.facebook.com/events/667668147440899/"
+              imageLink={'/static/images/marketing-site/event-3.jpg'}
+            />
           </Grid>
-          <Button variant="contained" className={classes.ctaButton}>
+
+          <Button
+            component="a"
+            href="/events"
+            variant="contained"
+            size="large"
+            color="secondary"
+            className={classes.ctaButton}
+          >
             See All
           </Button>
         </Grid>
