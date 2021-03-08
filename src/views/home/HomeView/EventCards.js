@@ -81,9 +81,6 @@ const EventCards = ({ title, date, link, imageLink, over }) => {
                 <Typography variant="overline" color="secondary">
                   {date}
                 </Typography>
-                <Typography variant="body2">
-                  Lorem ipsum, test paragraph description for event.
-                </Typography>
               </CardContent>
             </Grid>
             <Grid item xs={4} className={classes.ctaButton}>
