@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Container, Typography, Grid, makeStyles } from '@material-ui/core';
-
+import ReactPlayer from 'react-player';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.primary.main,
@@ -35,6 +35,13 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     width: '100%',
     margin: '25px auto 0px auto'
+  },
+  videoContainer: {
+    width: 640,
+    height: 360,
+    [theme.breakpoints.down('xs')]: {
+      width: 360
+    }
   }
 }));
 
@@ -55,10 +62,17 @@ const TLWHJourney = ({ className, ...rest }) => {
               THE LONG WALK HOME JOURNEY
             </Typography>
             <hr className={classes.divider} />
-            <img
-              src="/static/images/marketing-site/video-preview.png"
-              className={classes.flexImg}
-            />
+            <div
+              className={classes.videoContainer}
+              style={{ margin: '15px auto 0 auto' }}
+            >
+              <ReactPlayer
+                url="https://player.vimeo.com/video/323869962"
+                controls={true}
+                width="100%"
+                height="100%"
+              />
+            </div>
           </Grid>
         </Grid>
       </Container>

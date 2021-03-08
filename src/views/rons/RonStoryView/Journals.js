@@ -65,7 +65,7 @@ const Journals = ({ className, ...rest }) => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Container maxWidth="md">
         <Grid container alignItems="center">
-          <Grid item xs={12} alignContent="center">
+          <Grid item xs={12}>
             <Typography
               component="p"
               variant="overline"

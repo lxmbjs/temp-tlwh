@@ -15,7 +15,7 @@ const AboutView = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Home">
+    <Page className={classes.root} title="About Us">
       <MissionStatement />
       <InTheNews />
       <VisionStatement />

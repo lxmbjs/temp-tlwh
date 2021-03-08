@@ -13,7 +13,7 @@ const TeamView = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Home">
+    <Page className={classes.root} title="Our Team">
       <Team />
       <BoardTeam />
       <Footer />

@@ -1,7 +1,6 @@
 import React, { Suspense, Fragment, lazy } from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import DashboardLayout from 'src/layouts/DashboardLayout';
-import DocsLayout from 'src/layouts/DocsLayout';
 import MainLayout from 'src/layouts/MainLayout';
 import HomeView from 'src/views/home/HomeView';
 import AboutView from 'src/views/about/AboutView';
@@ -12,6 +11,8 @@ import GuestGuard from 'src/components/GuestGuard';
 import RonsStory from './views/rons/RonStoryView';
 import Events from './views/events/EventsView';
 import FAQView from './views/faq/FAQView';
+import SponsorForm from './views/forms/Sponsor';
+import AssistanceForm from './views/forms/Assisstance';
 
 export const renderRoutes = (routes = []) => (
   <Suspense fallback={<LoadingScreen />}>
@@ -258,85 +259,6 @@ const routes = [
     ]
   },
   {
-    path: '/docs',
-    layout: DocsLayout,
-    routes: [
-      {
-        exact: true,
-        path: '/docs',
-        component: () => <Redirect to="/docs/welcome" />
-      },
-      {
-        exact: true,
-        path: '/docs/welcome',
-        component: lazy(() => import('src/views/docs/WelcomeView'))
-      },
-      {
-        exact: true,
-        path: '/docs/getting-started',
-        component: lazy(() => import('src/views/docs/GettingStartedView'))
-      },
-      {
-        exact: true,
-        path: '/docs/environment-variables',
-        component: lazy(() => import('src/views/docs/EnvironmentVariablesView'))
-      },
-      {
-        exact: true,
-        path: '/docs/deployment',
-        component: lazy(() => import('src/views/docs/DeploymentView'))
-      },
-      {
-        exact: true,
-        path: '/docs/api-calls',
-        component: lazy(() => import('src/views/docs/APICallsView'))
-      },
-      {
-        exact: true,
-        path: '/docs/analytics',
-        component: lazy(() => import('src/views/docs/AnalyticsView'))
-      },
-      {
-        exact: true,
-        path: '/docs/authentication',
-        component: lazy(() => import('src/views/docs/AuthenticationView'))
-      },
-      {
-        exact: true,
-        path: '/docs/routing',
-        component: lazy(() => import('src/views/docs/RoutingView'))
-      },
-      {
-        exact: true,
-        path: '/docs/settings',
-        component: lazy(() => import('src/views/docs/SettingsView'))
-      },
-      {
-        exact: true,
-        path: '/docs/state-management',
-        component: lazy(() => import('src/views/docs/StateManagementView'))
-      },
-      {
-        exact: true,
-        path: '/docs/theming',
-        component: lazy(() => import('src/views/docs/ThemingView'))
-      },
-      {
-        exact: true,
-        path: '/docs/support',
-        component: lazy(() => import('src/views/docs/SupportView'))
-      },
-      {
-        exact: true,
-        path: '/docs/changelog',
-        component: lazy(() => import('src/views/docs/ChangelogView'))
-      },
-      {
-        component: () => <Redirect to="/404" />
-      }
-    ]
-  },
-  {
     path: '*',
     layout: MainLayout,
     routes: [
@@ -369,6 +291,16 @@ const routes = [
         exact: true,
         path: '/faq',
         component: FAQView
+      },
+      {
+        exact: true,
+        path: '/sponsor-us',
+        component: SponsorForm
+      },
+      {
+        exact: true,
+        path: '/request-assistance',
+        component: AssistanceForm
       },
       {
         exact: true,

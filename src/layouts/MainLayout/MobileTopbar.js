@@ -49,12 +49,13 @@ const TopBar = ({ onMobileNavOpen }) => {
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/app"
+          component="a"
+          href="https://www.flipcause.com/secure/cause_pdetails/Mzg4NzM="
+          target="_blank"
           underline="none"
           variant="body2"
         >
-          Dashboard
+          Donate
         </Link>
       </Toolbar>
     </AppBar>

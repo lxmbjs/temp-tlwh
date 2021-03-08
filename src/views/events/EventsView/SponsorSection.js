@@ -69,8 +69,9 @@ const SponsorSection = ({ className, ...rest }) => {
                 icon={EventIcon}
                 title="Host an Event"
                 desc="If you are interested in hosting an event with or for The Long Walk Home click below!"
-                link=""
+                link="https://thelongwalkhome.us10.list-manage.com/subscribe?u=517ce98bac982fd4a794be0be&id=67e98fcb64"
                 ctaText="Learn More"
+                newTab={true}
               />
             </Grid>
             <Grid item xs={12} md={6}>
@@ -78,7 +79,7 @@ const SponsorSection = ({ className, ...rest }) => {
                 icon={PaymentIcon}
                 title="Sponsor Us"
                 desc="Interested in becoming a sponsor, click below to request more information."
-                link=""
+                link="/sponsor-us"
                 ctaText="Learn More"
               />
             </Grid>

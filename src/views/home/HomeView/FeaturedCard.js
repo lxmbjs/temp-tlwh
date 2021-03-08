@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import HealingIcon from '@material-ui/icons/Healing';
+import { autofill } from 'redux-form';
 
 const useStyles = makeStyles({
   root: {
@@ -23,9 +24,11 @@ const useStyles = makeStyles({
     marginBottom: 12
   },
   iconClass: {
-    width: '100%',
+    display: 'flex',
+    width: '75px',
+    height: 'auto',
     fontSize: '5.5rem',
-    margin: '25px 0 0 0',
+    margin: '25px auto 0 auto',
     color: '#62b2dd'
   },
   cardParagraph: {
@@ -41,11 +44,16 @@ const FeaturedCard = props => {
 
   const {
     title = 'Title here',
-    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    image = '/static/images/marketing-site/icons/Membership.png',
+    ctaText = 'Learn More',
+    link = 'https://www.flipcause.com/secure/cause_pdetails/MTA3Mjg1',
+    newTab = false
   } = props;
   return (
     <Card className={classes.root} variant="outlined">
-      <HealingIcon className={classes.iconClass} />
+      <img src={image} className={classes.iconClass} />
+
       <CardContent style={{ textAlign: 'center' }}>
         <Typography variant="h3" component="h2">
           {title}
@@ -61,11 +69,14 @@ const FeaturedCard = props => {
       <CardActions>
         <Button
           variant="contained"
+          component="a"
+          href={link}
+          target={newTab ? '_blank' : ''}
           color="secondary"
           size="large"
           className={classes.ctaButton}
         >
-          Read More
+          {ctaText}
         </Button>
       </CardActions>
     </Card>

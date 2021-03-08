@@ -23,16 +23,16 @@ const useStyles = makeStyles(theme => ({
     width: 48
   },
   firstBox: {
-    borderRight: '2px solid #db252f'
+    borderRight: '2px solid #9a9a9a'
   },
   secondBox: {
-    borderRight: '2px solid #db252f'
+    borderRight: '2px solid #9a9a9a'
   },
   lastBox: {
     marginRight: '10px'
   },
   counterTitles: {
-    color: '#db252f'
+    color: '#c3e6f9'
   }
 }));
 
@@ -69,7 +69,7 @@ const TodaysMoney = ({ className, ...rest }) => {
               style={{ color: '#fff' }}
             >
               {data.currency}
-              <CountUp end={12000} />
+              <CountUp end={6390} />
             </Typography>
           </Box>
         </div>
@@ -93,7 +93,7 @@ const TodaysMoney = ({ className, ...rest }) => {
               style={{ color: '#fff' }}
             >
               {data.currency}
-              <CountUp end={30000} />
+              <CountUp end={2390} />
             </Typography>
           </Box>
         </div>
@@ -107,7 +107,7 @@ const TodaysMoney = ({ className, ...rest }) => {
             color="textSecondary"
             className={classes.counterTitles}
           >
-            Proceeds
+            Financial Assistance
           </Typography>
           <Box display="flex" alignItems="center" flexWrap="wrap">
             <Typography
@@ -116,7 +116,7 @@ const TodaysMoney = ({ className, ...rest }) => {
               style={{ color: '#fff' }}
             >
               {data.currency}
-              <CountUp end={9000} />
+              <CountUp end={11897} />
             </Typography>
           </Box>
         </div>

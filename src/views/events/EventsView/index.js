@@ -12,7 +12,7 @@ const Events = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Home">
+    <Page className={classes.root} title="Events">
       <SponsorSection />
       <EventsContainer />
       <Footer />

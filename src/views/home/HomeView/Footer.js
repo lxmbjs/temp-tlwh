@@ -97,11 +97,11 @@ const useStyles = makeStyles(theme => ({
   },
   newsletterSubtext: {
     marginTop: '15px',
-    color: '#db252f'
+    color: '#c3e6f9'
   },
   newsletterSubtext2: {
     marginTop: '25px',
-    color: '#db252f'
+    color: '#c3e6f9'
   },
   newsletterContainer: {
     padding: '0 25px'
@@ -120,6 +120,11 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center',
       padding: '0'
     }
+  },
+  submitButton: {
+    margin: 'auto',
+    padding: '10px 15px',
+    marginTop: '15px'
   }
 }));
 
@@ -142,19 +147,66 @@ const Footer = ({ className, ...rest }) => {
                 <Typography variant="h2" style={{ color: 'white' }}>
                   NEWSLETTER
                 </Typography>
-                <Typography
-                  variant="body1"
-                  className={classes.newsletterSubtext}
-                >
-                  Subscribe to our Newsletter to be updated, we promise not to
-                  spam.
-                </Typography>
-                <TextField
-                  id="outlined-basic"
-                  label="Email"
-                  variant="outlined"
-                  className={classes.textInput}
-                />
+
+                <div id="mc_embed_signup">
+                  <form
+                    action="https://thelongwalkhome.us10.list-manage.com/subscribe/post?u=517ce98bac982fd4a794be0be&amp;id=5bc07f67fc"
+                    method="post"
+                    id="mc-embedded-subscribe-form"
+                    name="mc-embedded-subscribe-form"
+                    className="validate"
+                    target="_blank"
+                    noValidate
+                  >
+                    <div id="mc_embed_signup_scroll">
+                      <div className="mc-field-group">
+                        <TextField
+                          id="mce-EMAIL"
+                          name="EMAIL"
+                          label="Email"
+                          defaultValue=""
+                          variant="outlined"
+                          type="email"
+                          className={classes.textInput}
+                        />
+                      </div>
+                      <div id="mce-responses" className="clear">
+                        <div
+                          className="response"
+                          id="mce-error-response"
+                          style={{ display: 'none' }}
+                        ></div>
+                        <div
+                          className="response"
+                          id="mce-success-response"
+                          style={{ display: 'none' }}
+                        ></div>
+                      </div>
+                      <div
+                        style={{ position: 'absolute', left: '-5000px' }}
+                        aria-hidden="true"
+                      >
+                        <input
+                          type="text"
+                          name="b_517ce98bac982fd4a794be0be_5bc07f67fc"
+                          tabIndex="-1"
+                          defaultValue=""
+                        />
+                      </div>
+                      <div className="clear">
+                        <Button
+                          variant="contained"
+                          type="submit"
+                          color="secondary"
+                          size="small"
+                          className={classes.submitButton}
+                        >
+                          Submit
+                        </Button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </Grid>
             <Grid item md={4} xs={12} className={classes.footerItemContainer}>
@@ -179,16 +231,10 @@ const Footer = ({ className, ...rest }) => {
                     <FacebookIcon className={classes.socialIcons} />
                   </a>
                   <a
-                    href="https://www.facebook.com/Thelongwalkhomeinc/"
+                    href="https://www.instagram.com/militarytocivilianlife/"
                     target="_blank"
                   >
                     <InstagramIcon className={classes.socialIcons} />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/Thelongwalkhomeinc/"
-                    target="_blank"
-                  >
-                    <TwitterIcon className={classes.socialIcons} />
                   </a>
                 </div>
               </div>

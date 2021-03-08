@@ -39,7 +39,7 @@ const useStyles = makeStyles({
 const SponsorCard = props => {
   const classes = useStyles();
   const Icon = props.icon;
-  const { title, desc, link, ctaText } = props;
+  const { title, desc, link, ctaText, newTab = false } = props;
   return (
     <Card className={classes.root} variant="outlined">
       <Icon className={classes.iconClass} />
@@ -59,6 +59,9 @@ const SponsorCard = props => {
         <Button
           variant="contained"
           color="secondary"
+          component="a"
+          href={link}
+          target={newTab ? '_blank' : ''}
           size="large"
           className={classes.ctaButton}
         >

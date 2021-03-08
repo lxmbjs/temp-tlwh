@@ -31,7 +31,11 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const TeamCard = ({ name = 'Name here', title = 'Title here' }) => {
+const TeamCard = ({
+  name = 'Name here',
+  title = 'Title here',
+  image = '/static/images/marketing-site/blog-card-image.png'
+}) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -39,7 +43,7 @@ const TeamCard = ({ name = 'Name here', title = 'Title here' }) => {
         component="img"
         alt="placeholder"
         height="250"
-        image="/static/images/marketing-site/blog-card-image.png"
+        image={image}
         title="Placeholder"
       />
       <CardContent className={classes.contentRoot}>
@@ -62,7 +66,7 @@ const TeamCard = ({ name = 'Name here', title = 'Title here' }) => {
           {title}
         </Typography>
       </CardContent>
-
+      {/* 
       <CardActions className={classes.socialIconArea}>
         <div style={{ margin: 'auto', padding: '15px 15px' }}>
           <FacebookIcon className={classes.socialIcons} />
@@ -70,6 +74,7 @@ const TeamCard = ({ name = 'Name here', title = 'Title here' }) => {
           <TwitterIcon className={classes.socialIcons} />
         </div>
       </CardActions>
+      */}
     </Card>
   );
 };

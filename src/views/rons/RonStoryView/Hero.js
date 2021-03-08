@@ -63,13 +63,7 @@ const Hero = ({ className, ...rest }) => {
               className={classes.flexImg}
             />
           </Grid>
-          <Grid
-            item
-            md={6}
-            xs={12}
-            style={{ paddingLeft: '25px' }}
-            alignContent="center"
-          >
+          <Grid item md={6} xs={12} style={{ paddingLeft: '25px' }}>
             <Typography
               component="p"
               variant="overline"

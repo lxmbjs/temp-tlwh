@@ -24,10 +24,12 @@ const useStyles = makeStyles({
     marginBottom: 12
   },
   iconClass: {
-    width: '100%',
-    fontSize: '2.5rem',
-    margin: '25px 0 25px 0',
-    color: '#db252f'
+    display: 'flex',
+    width: '50px',
+    height: 'auto',
+    fontSize: '5.5rem',
+    margin: '25px auto 0 auto',
+    color: '#62b2dd'
   },
   cardParagraph: {
     marginTop: '15px',
@@ -44,12 +46,17 @@ const useStyles = makeStyles({
 const StatCard = props => {
   const classes = useStyles();
 
-  const { title = 'Title here', number = 12000, currency = false } = props;
+  const {
+    title = 'Title here',
+    number = 12000,
+    currency = false,
+    image = '/static/images/marketing-site/icons/Veterans Helped.png'
+  } = props;
 
   return (
     <Card className={classes.root} variant="outlined">
       <CardContent style={{ textAlign: 'center' }}>
-        <HealingIcon className={classes.iconClass} />
+        <img src={image} className={classes.iconClass} />
         <Typography variant="h2" component="h2" className={classes.statText}>
           {currency ? '$' : ''}
           <CountUp end={number} />

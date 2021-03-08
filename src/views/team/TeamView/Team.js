@@ -59,22 +59,39 @@ const Team = ({ className, ...rest }) => {
           spacing={4}
         >
           <Grid item xs={12} md={4}>
-            <TeamCard name="Ron Zaleski" title="Founder & President" />
+            <TeamCard
+              name="Ron Zaleski"
+              title="Founder & President"
+              image="/static/images/marketing-site/Ron.jpg"
+            />
           </Grid>
           <Grid item xs={12} md={4}>
             <TeamCard
               name="Terri Miller"
               title="Finance Manager & Event Planner"
+              image="/static/images/marketing-site/Terri.jpg"
             />
           </Grid>
           <Grid item xs={12} md={4}>
-            <TeamCard name="Craig Wallace" title="Marketing Manager" />
+            <TeamCard
+              name="Craig Wallace"
+              title="Marketing Manager"
+              image="/static/images/marketing-site/Craig.jpg"
+            />
           </Grid>
           <Grid item xs={12} md={4}>
-            <TeamCard name="Cody Mcelhinny" title="Graphic Designer" />
+            <TeamCard
+              name="Cody Mcelhinny"
+              title="Graphic Designer"
+              image="/static/images/marketing-site/Cody.jpg"
+            />
           </Grid>
           <Grid item xs={12} md={4}>
-            <TeamCard name="AnnMarie Kennedy" title="Event Coordinator" />
+            <TeamCard
+              name="AnnMarie Kennedy"
+              title="Event Coordinator"
+              image="/static/images/marketing-site/Annmarie.jpg"
+            />
           </Grid>
         </Grid>
       </Container>

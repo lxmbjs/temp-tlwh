@@ -73,56 +73,55 @@ const WeOfferSection = ({ className, ...rest }) => {
           <Grid container spacing={4}>
             <Grid item xs={12} md={4}>
               <FeaturedCard
-                title="Mentorship Program"
-                description="Become a Mentor to help support Veterans with their adjustment or find a Mentor to help you with your transition to civilian life."
-              />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <FeaturedCard
                 title="Become A Member"
                 description="Members receive; 10% Off all TLWH’s Merchandise, Membership Certificate, and you get to choose the category to donate to."
+                image="/static/images/marketing-site/icons/Membership.png"
+                newTab={true}
+                link="https://www.flipcause.com/secure/cause_pdetails/MTA3Mjg1"
               />
             </Grid>
             <Grid item xs={12} md={4}>
               <FeaturedCard
                 title="Events"
                 description="Our events are based out of South West Florida and if you aren’t local we offer online events."
+                image="/static/images/marketing-site/icons/Events.png"
+                link="/events"
               />
             </Grid>
-            <Grid item xs={12} md={4}>
-              <FeaturedCard
-                title="Volunteering"
-                description="Check out all of our volunteer opportunities (Online and in-person)"
-              />
-            </Grid>
+
             <Grid item xs={12} md={4}>
               <FeaturedCard
                 title="Become A Sponsor"
                 description="Click here to learn more about sponsorship opportunities"
+                image="/static/images/marketing-site/icons/Sponsors.png"
+                link="/sponsor-us"
               />
             </Grid>
-            <Grid item xs={12} md={4}>
-              <FeaturedCard
-                title="Veteran-Owned Business Support"
-                description="We offer marketing support, guides, and workshops"
-              />
-            </Grid>
+
             <Grid item xs={12} md={4}>
               <FeaturedCard
                 title="Host An Event"
                 description="If you would like to host an event through The Long Walk Home click here"
+                image="/static/images/marketing-site/icons/Host an Event.png"
+                link="https://thelongwalkhome.us10.list-manage.com/subscribe?u=517ce98bac982fd4a794be0be&id=67e98fcb64"
+                newTab={true}
               />
             </Grid>
             <Grid item xs={12} md={4}>
               <FeaturedCard
                 title="Facebook Group"
                 description="Join our Facebook group - Military To Civilian Life"
+                image="/static/images/marketing-site/icons/Facebook.png"
+                newTab={true}
+                link="https://www.facebook.com/groups/military2civilianlife/"
               />
             </Grid>
             <Grid item xs={12} md={4}>
               <FeaturedCard
                 title="Financial Assistance"
                 description="Submit an application for direct financial assistance from The Long Walk Home."
+                image="/static/images/marketing-site/icons/Financial Assistance.png"
+                link="/request-assistance"
               />
             </Grid>
           </Grid>

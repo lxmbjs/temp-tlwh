@@ -109,11 +109,11 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           className={classes.counterTitles}
           style={{ marginRight: '10px' }}
         >
-          Donations
+          DONATIONS
         </Typography>
         <Typography variant="h3" color="textPrimary">
           $
-          <CountUp end={12000} />
+          <CountUp end={6390} />
         </Typography>
         <Typography
           component="h3"
@@ -123,11 +123,11 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           className={classes.counterTitles}
           style={{ marginTop: '10px' }}
         >
-          Subscriptions
+          SUBSCRIPTIONS
         </Typography>
         <Typography variant="h3" color="textPrimary">
           $
-          <CountUp end={1200} />
+          <CountUp end={2390} />
         </Typography>
         <Typography
           component="h3"
@@ -137,11 +137,11 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           className={classes.counterTitles}
           style={{ marginTop: '10px' }}
         >
-          Proceeds
+          FINANCIAL ASSISTANCE
         </Typography>
         <Typography variant="h3" color="textPrimary">
           $
-          <CountUp end={9000} />
+          <CountUp end={11897} />
         </Typography>
       </Box>
     </Box>

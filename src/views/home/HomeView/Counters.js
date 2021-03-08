@@ -93,13 +93,25 @@ const Counters = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Veterans Helped'} number={120} />
+                <Stats
+                  title={'Veterans Helped'}
+                  number={120}
+                  image="/static/images/marketing-site/icons/Veterans Helped.png"
+                />
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Mentees'} number={448} />
+                <Stats
+                  title={'Mentors'}
+                  number={26}
+                  image="/static/images/marketing-site/icons/Mentees.png"
+                />
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Donors'} number={1080} />
+                <Stats
+                  title={'Donors'}
+                  number={1080}
+                  image="/static/images/marketing-site/icons/Donors.png"
+                />
               </Grid>
               <Grid item xs={12} md={3}>
                 <Typography variant="h2">Fundraising</Typography>
@@ -112,13 +124,28 @@ const Counters = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Donations'} number={1200} currency={true} />
+                <Stats
+                  title={'Donations'}
+                  number={6390}
+                  currency={true}
+                  image="/static/images/marketing-site/icons/Donations Recieved.png"
+                />
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Subscriptions'} number={30000} currency={true} />
+                <Stats
+                  title={'Subscriptions'}
+                  number={2390}
+                  currency={true}
+                  image="/static/images/marketing-site/icons/Subscriptions.png"
+                />
               </Grid>
               <Grid item xs={12} md={3}>
-                <Stats title={'Proceeds'} number={9000} currency={true} />
+                <Stats
+                  title={'FINANCIAL ASSISTANCE'}
+                  number={11897}
+                  currency={true}
+                  image="/static/images/marketing-site/icons/Proceeds.png"
+                />
               </Grid>
             </Grid>
           </Grid>

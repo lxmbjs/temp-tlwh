@@ -69,7 +69,7 @@ const TopBar = ({ className, ...rest }) => {
           <Typography variant="body1" style={{ fontWeight: '700' }}>
             THE LONG WALK HOME
           </Typography>
-          <Typography variant="body2" style={{ color: '#db252f' }}>
+          <Typography variant="body2" style={{ color: '#c3e6f9' }}>
             NON-PROFIT ORGANIZATION
           </Typography>
         </div>
@@ -145,11 +145,10 @@ const TopBar = ({ className, ...rest }) => {
           component="a"
           href="https://www.flipcause.com/secure/cause_pdetails/Mzg4NzM="
           target="_blank"
-          color="primary"
           variant="contained"
           size="large"
         >
-          DONATE NOW
+          DONATE
         </Button>
       </Toolbar>
     </AppBar>

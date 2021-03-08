@@ -12,7 +12,7 @@ const FAQView = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Home">
+    <Page className={classes.root} title="FAQs">
       <Container size="md">
         <Faq />
       </Container>

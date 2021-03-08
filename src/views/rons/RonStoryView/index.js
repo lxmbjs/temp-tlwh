@@ -14,7 +14,7 @@ const RonsStory = () => {
   const classes = useStyles();
 
   return (
-    <Page className={classes.root} title="Home">
+    <Page className={classes.root} title="Ron's Story">
       <Hero />
       <TLWHJourney />
       <VideoSection />

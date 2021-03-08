@@ -138,7 +138,7 @@ const Hero = ({ className, ...rest }) => {
           </Grid>
           <Grid item xs={12} sm={6} className={classes.item2}>
             <img
-              src="/static/images/marketing-site/member-image.png"
+              src="/static/images/marketing-site/the-long-walk-home.png"
               className={classes.flexImg}
             />
           </Grid>
