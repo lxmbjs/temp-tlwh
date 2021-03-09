@@ -132,14 +132,7 @@ const Form = () => {
               className={classes.textInput}
             />
           </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              name="id"
-              label="DD-214 or Military ID"
-              variant="outlined"
-              className={classes.textInput}
-            />
-          </Grid>
+
           <Grid item xs={12}>
             <TextField
               name="message"

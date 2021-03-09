@@ -13,6 +13,7 @@ import Events from './views/events/EventsView';
 import FAQView from './views/faq/FAQView';
 import SponsorForm from './views/forms/Sponsor';
 import AssistanceForm from './views/forms/Assisstance';
+import VolunteerForm from './views/forms/Volunteer';
 
 export const renderRoutes = (routes = []) => (
   <Suspense fallback={<LoadingScreen />}>
@@ -296,6 +297,11 @@ const routes = [
         exact: true,
         path: '/sponsor-us',
         component: SponsorForm
+      },
+      {
+        exact: true,
+        path: '/volunteer',
+        component: VolunteerForm
       },
       {
         exact: true,

@@ -64,7 +64,7 @@ const Form = () => {
           emailjs
             .sendForm(
               'service_f658qsg',
-              'template_vmvyd8g',
+              'template_suwmqtd',
               e.target,
               'user_s6NDAY6ObadGiaGqPmzl1'
             )
@@ -116,18 +116,37 @@ const Form = () => {
               className={classes.textInput}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} md={12}>
             <TextField
-              name="message"
+              name="q_1"
+              label="Have you had any training or experience that would be relevant for volunteering for The Long Walk Home?"
+              variant="outlined"
               multiline
               rows={4}
-              label="Message"
+              className={classes.textInput}
+            />
+          </Grid>
+          <Grid item xs={12} md={12}>
+            <TextField
+              name="q_2"
+              label="What are your reasons for wanting to get involved in helping Veterans?"
               variant="outlined"
+              multiline
+              rows={4}
               className={classes.textInput}
             />
           </Grid>
 
-          <input type="hidden" value="General Contact" name="form_type" />
+          <Grid item xs={12}>
+            <TextField
+              name="q_3"
+              multiline
+              rows={4}
+              label="How did you hear about The Long Walk Home?"
+              variant="outlined"
+              className={classes.textInput}
+            />
+          </Grid>
 
           {success ? (
             <div className={classes.successContainer}>

@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   successContainer: {
     textAlign: 'center',
-    width: '25%',
+    width: '50%',
     color: 'green',
     fontFamily: 'ROBOTO',
     background: ' #abceab',
@@ -148,7 +148,12 @@ const Form = () => {
           <input type="hidden" value="Sponsorship Request" name="form_type" />
 
           {success ? (
-            <div className={classes.successContainer}>Success!</div>
+            <div className={classes.successContainer}>
+              Success!
+              <p>
+                A representative will get back to you within 24 hours, thank you
+              </p>
+            </div>
           ) : (
             <Button
               variant="contained"

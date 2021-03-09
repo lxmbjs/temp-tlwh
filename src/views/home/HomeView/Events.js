@@ -87,6 +87,7 @@ const Events = ({ className, ...rest }) => {
             <EventCards
               title="Battle Of The Branches Axe Throwing Tournament"
               date="Mar. 17, 2021"
+              over={true}
               link="https://www.flipcause.com/secure/cause_pdetails/MTA5MDc0"
             />
             <EventCards
