@@ -71,7 +71,7 @@ const EventCards = ({ title, date, link, imageLink, over }) => {
           }}
           className={classes.imgContainer}
         ></Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={12}>
           <Grid container alignItems="center">
             <Grid item xs={8}>
               <CardContent className={classes.content}>

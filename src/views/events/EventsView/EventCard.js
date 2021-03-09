@@ -46,8 +46,6 @@ const EventCard = ({ title, date, link, imageLink, desc }) => {
   const classes = useStyles();
   const theme = useTheme();
 
-  console.log(link);
-
   return (
     <Card className={classes.root}>
       <div className={classes.details}>

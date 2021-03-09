@@ -88,21 +88,18 @@ const Events = ({ className, ...rest }) => {
               title="Battle Of The Branches Axe Throwing Tournament"
               date="Mar. 17, 2021"
               link="https://www.flipcause.com/secure/cause_pdetails/MTA5MDc0"
-              imageLink={'/static/images/marketing-site/event-example.jpg'}
             />
             <EventCards
               title="Axe Throwing For Veterans"
               date="Jan. 26, 2021"
               over={true}
               link="https://www.facebook.com/events/1292436267800005/"
-              imageLink={'/static/images/marketing-site/event-2.jpg'}
             />
             <EventCards
               title="Veteran's Day Bike Ride"
               date="Nov. 14, 2020"
               over={true}
               link="https://www.facebook.com/events/667668147440899/"
-              imageLink={'/static/images/marketing-site/event-3.jpg'}
             />
           </Grid>
 

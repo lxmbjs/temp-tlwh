@@ -31,42 +31,51 @@ const faqTitles = [
   {
     q: 'How can I become a mentor?',
     a:
-      'The Long Walk Home’s mentorship program is open to all Veterans, Family Members, and Supporters. To apply to become a mentor please go to - Thelongwalkhome.org/mentorship'
+      'The Long Walk Home’s mentorship program is open to all Veterans, Family Members, and Supporters. To apply to become a mentor please click below.'
   },
   {
     q: 'How can I get connected with a mentor?',
     a:
-      'If you are looking for a mentor to help you make your adjustment to civilian life. If you would like to request a mentor please go to - Thelongwalkhome.org/mentorship'
+      'If you are looking for a mentor to help you make your adjustment to civilian life. If you would like to request a mentor please call Ron Zaleski at (305) 399-5354 and he will connect you with a mentor.',
+    ctaEnabled: false
   },
   {
     q: 'What are the benefits of becoming a member?',
     a:
-      'All members get to choose where their donation goes, receive a certificate of appreciation, and 10% off all The Long Walk Home Merchandise and event tickets.'
+      'All members get to choose where their donation goes, receive a certificate of appreciation, and 10% off all The Long Walk Home Merchandise and event tickets.',
+    ctaEnabled: false
   },
   {
     q: 'Where do I start if I want to volunteer?',
     a:
-      'If you would like to become a volunteer either online or in-person please fill out an application here - Thelongwalkhome.com/volunteering'
+      'If you would like to become a volunteer either online or in-person please call AnnMarie at (973) 970-5009 or you can email AnnMarie@thelongwalkhome.org.',
+    ctaEnabled: false
   },
   {
     q: 'How can I become a Sponsor for The Long Walk Home?',
     a:
-      'If you would like to learn more about sponsorship opportunities for The Long Walk Home please go to - Thelongwalkhome.org/contact and fill out your business information.'
+      'If you would like to learn more about sponsorship opportunities for The Long Walk Home please click below.',
+    ctaLink: '/sponsor-us'
   },
   {
     q: 'How can I host an event funded by The Long Walk Home?',
     a:
-      'If you would like to host an event with The Long Walk Home go to - Thelongwalkhome.org/events and click “Host An Event” button. Once you fill out the form a representative will be in contact with you within 48 business hours.'
+      'If you would like to host an event with The Long Walk Home please click below and fill out the form below.',
+    ctaText: 'Host An Event',
+    ctaLink:
+      'https://thelongwalkhome.us10.list-manage.com/subscribe?u=517ce98bac982fd4a794be0be&id=67e98fcb64'
   },
   {
     q: 'Who is Ron Zaleski?',
     a:
-      'Ron Zaleski is the founder of The Long Walk Home. He walked the appalachian trail barefoot and across the country to spread awareness for the 22 Veterans that commit suicide every day. Learn more about his story at thelongwalkhome.org/ronzaleski'
+      'Ron Zaleski is the founder of The Long Walk Home. He walked the appalachian trail barefoot and across the country to spread awareness for the 22 Veterans that commit suicide every day. Learn more about his story by clicking below.',
+    ctaLink: '/rons-story'
   },
   {
     q: 'Can I get a membership for free?',
     a:
-      'If you are a Veteran and would like to gain membership access or tickets to our online or in-person events for free please email info@thelongwalkhome with your DD-214.'
+      'If you are a Veteran and would like to gain membership access or tickets to our online or in-person events for free please email info@thelongwalkhome with your DD-214.',
+    ctaEnabled: false
   }
 ];
 
@@ -93,6 +102,9 @@ const Faq = () => {
           <AccordionCard
             accordionQuestion={question.q}
             accordionAnswer={question.a}
+            ctaText={question.ctaText}
+            ctaEnabled={question.ctaEnabled}
+            ctaLink={question.ctaLink}
           />
         ))}
       </Grid>

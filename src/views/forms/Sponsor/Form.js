@@ -116,12 +116,30 @@ const Form = () => {
               className={classes.textInput}
             />
           </Grid>
+          <Grid item xs={12} md={6}>
+            <TextField
+              type="email"
+              name="email"
+              label="Business Name"
+              variant="outlined"
+              className={classes.textInput}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <TextField
+              type="email"
+              name="email"
+              label="Website"
+              variant="outlined"
+              className={classes.textInput}
+            />
+          </Grid>
           <Grid item xs={12}>
             <TextField
               name="message"
               multiline
               rows={4}
-              label="Message"
+              label="What are you interested in sponsoring? (Events, Social Media, etc)"
               variant="outlined"
               className={classes.textInput}
             />

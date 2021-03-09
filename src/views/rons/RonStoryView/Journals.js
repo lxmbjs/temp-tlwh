@@ -81,99 +81,45 @@ const Journals = ({ className, ...rest }) => {
             <hr className={classes.divider} />
             <div className={classes.journalContainer}>
               <Typography variant="h3" color="primary">
-                Entry #1
+                Ron's Daily Journals #1
               </Typography>
               <Typography variant="overline" color="secondary">
-                June 7th, 2016
+                March 3rd, 2021
               </Typography>
               <Typography
                 variant="body1"
                 align="left"
                 className={classes.galleryBody}
               >
-                On my way to California I happened to come across the Peace Abby
-                and stopped in to see what they were up to as it seems a lot of
-                peace movements are active and willing to help even if you still
-                believe that there are times when a war may be just. I don’t get
-                involved in politics as I don’t have the information to make
-                that decision. Any decisions I make in those areas are
-                meaningless as I am ill informed, but I do know and most can
-                agree that our soldiers coming home need more help to adjust to
-                coming home. Well while there they showed me a memorial they had
-                for the unknown civilians who had died in combat. It is a one
-                ton slab of Granite, engraved on it is, “To the unknown
-                civilians killed in war”. It is not something that is talked
-                about much, which isn’t surprising as 90% or better of the
-                people killed in a war are civilians. That means if 10,000
-                soldiers lost their lives, over 100,000 civilians are dead. It
-                seems the people we try to save or protect suffer the most as a
-                whole, we all suffer the same only with smaller numbers. Our
-                soldiers seeing this first hand carry this with them for there
-                is no honor in those deaths as compared to fighting an equal on
-                a battlefield.
-              </Typography>
-            </div>
-            <div className={classes.journalContainer}>
-              <Typography variant="h3" color="primary">
-                Entry #2
-              </Typography>
-              <Typography variant="overline" color="secondary">
-                June 8th, 2016
-              </Typography>
-              <Typography
-                variant="body1"
-                align="left"
-                className={classes.galleryBody}
-              >
-                Walking down lightly traveled roads as compared to being at the
-                Boston Harbor I still am seen by closed to 2,000 drivers and
-                have more of a chance to interact with people as I go. I am
-                surprised at times by the people who stop me, such as the woman
-                in there 70′s and 80′s to tell me of there Grandsons that are in
-                the Military and not the same anymore. All experiences have an
-                effect of some sort, but the experience of war generally doesn’t
-                leave one with a lot of warm fuzzy feelings. There is a
-                perpetual dark cloud in her life now as she frets for loved ones
-                whose lives she seems to no longer be part of.
-              </Typography>
-            </div>
-            <div className={classes.journalContainer}>
-              <Typography variant="h3" color="primary">
-                Entry #3
-              </Typography>
-              <Typography variant="overline" color="secondary">
-                June 9th, 2016
-              </Typography>
-              <Typography
-                variant="body1"
-                align="left"
-                className={classes.galleryBody}
-              >
-                On my stroll across this great land it has been brought to my
-                attention that I maybe insane, it is a question I ask myself
-                usually at the start of each day. I take this as a good sign
-                that I am sane for I am told if you think your sane there is a
-                good chance you really are crazy. When you here the story’s I do
-                and see the broken lives I do I get impatient for everyday that
-                goes by more good people have killed themselves, some quickly
-                and others slowly and taking the innocent down with them. Is it
-                so crazy to want that to change right now, today instead of
-                waiting and saying in God’s time as families are destroyed?
-              </Typography>
-
-              <Typography
-                variant="body1"
-                align="left"
-                className={classes.galleryBody}
-              >
-                After his Appalachian Trail hike, he decided to walk barefoot
-                across the United States. Ron saw his politicians were not doing
-                enough, so he decided to step forward – He brought a petition
-                with over 10,000 signatures asking for mandatory counseling for
-                all military personnel prior to discharging and brought it to
-                Washington. While there he learned you don’t tell them what to
-                do, you go there asking for help in what you are doing. We are
-                the change, not our politicians who are just a reflection of us.
+                No wind is strong enough to blow your mind: We are a choice
+                everyday and when we let a physical force dictate what happens
+                to our being we have given our power away and have become a
+                victim. But, don't worry, it's only a mistake that can be fixed.
+                Telling someone to forgive themselves is like trying to tell a
+                woman who thinks she's fat that she isn't. I have been told that
+                words are the least effective way of communication, and I
+                believe them after I have tried to talk to people. I find when I
+                talk from my heart instead of my head we connect through a
+                feeling, which I think is more effective. I have a sign by my
+                desk as a reminder about communication: I know that you believe
+                you understand what you think I said, but I'm not sure you
+                realize that what you heard is not what I meant. My serenity
+                prayer: God, grant me the serenity to accept the people I cannot
+                change, the courage to change the person I can and the wisdom to
+                know that person is me. (borrowed from my friend Mindy Agler) I
+                find that when I do something I've never done before the first
+                step is the hardest. Like the first time I went sky diving, but
+                after that step I was total present to the moment When I was
+                little my father would sit me in his lap when he drove and let
+                me hold the steering wheel. I thought I was driving the car.
+                Sometimes I get glimpses of that when I think I've done things.
+                A person once told me when I was walking across America that I
+                was doing God's work, I said, "No, I'm joy riding, he's doing
+                the work." Once I told one of my masters that practice makes
+                perfect, he said, "It doesn't, but perfect practice does." The
+                master was my son. Once in a while each of us gets inspired to
+                do something, but if we wait long enough the feeling will go
+                away and maybe it will become our regrete. Why take that chance.
               </Typography>
             </div>
           </Grid>

@@ -62,7 +62,7 @@ const TopBar = ({ className, ...rest }) => {
   return (
     <AppBar className={clsx(classes.root, className)} color="default" {...rest}>
       <Toolbar className={classes.toolbar}>
-        <RouterLink to="/">
+        <RouterLink href="/">
           <Logo className={classes.logo} />
         </RouterLink>
         <div>
@@ -80,8 +80,8 @@ const TopBar = ({ className, ...rest }) => {
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/"
+          component="a"
+          href="/"
           underline="none"
           variant="body2"
         >
@@ -90,8 +90,18 @@ const TopBar = ({ className, ...rest }) => {
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/about-us"
+          component="a"
+          href="/events"
+          underline="none"
+          variant="body2"
+        >
+          Events
+        </Link>
+        <Link
+          className={classes.link}
+          color="textSecondary"
+          component="a"
+          href="/about-us"
           underline="none"
           variant="body2"
         >
@@ -101,8 +111,8 @@ const TopBar = ({ className, ...rest }) => {
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/our-team"
+          component="a"
+          href="/our-team"
           underline="none"
           variant="body2"
         >
@@ -111,28 +121,19 @@ const TopBar = ({ className, ...rest }) => {
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/rons-story"
+          component="a"
+          href="/rons-story"
           underline="none"
           variant="body2"
         >
           Ron's Story
         </Link>
+
         <Link
           className={classes.link}
           color="textSecondary"
-          component={RouterLink}
-          to="/events"
-          underline="none"
-          variant="body2"
-        >
-          Events
-        </Link>
-        <Link
-          className={classes.link}
-          color="textSecondary"
-          component={RouterLink}
-          to="/faq"
+          component="a"
+          href="/faq"
           underline="none"
           variant="body2"
         >

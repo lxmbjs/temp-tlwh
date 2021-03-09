@@ -17,8 +17,8 @@ const AboutView = () => {
   return (
     <Page className={classes.root} title="About Us">
       <MissionStatement />
-      <InTheNews />
       <VisionStatement />
+      <InTheNews />
       <ExecutiveSummary />
       <ByLaws />
       <Footer />

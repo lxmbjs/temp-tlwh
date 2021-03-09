@@ -17,7 +17,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: '#263238',
     paddingTop: 50,
     paddingBottom: 50,
     '& label.Mui-focused': {
@@ -86,14 +86,16 @@ const useStyles = makeStyles(theme => ({
     marginTop: '25px'
   },
   socialIcons: {
-    color: '#db252f',
-    margin: '0 10px'
+    color: '#000',
+    margin: '0 10px',
+    fontSize: '1.9rem'
   },
   socialIconContainer: {
     marginTop: '25px'
   },
   textInput: {
-    marginTop: '25px'
+    marginTop: '25px',
+    width: '75%'
   },
   newsletterSubtext: {
     marginTop: '15px',

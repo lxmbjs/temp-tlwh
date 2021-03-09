@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, makeStyles, Grid } from '@material-ui/core';
+import { Container, makeStyles, Grid, Button } from '@material-ui/core';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -17,7 +17,10 @@ const useStyles = makeStyles(theme => ({
 
 const AccordionCard = ({
   accordionQuestion = 'Question',
-  accordionAnswer = 'Answer'
+  accordionAnswer = 'Answer',
+  ctaText = 'Learn More',
+  ctaLink = 'mailto:thelongwalkhomeinc@gmail.com',
+  ctaEnabled = true
 }) => {
   const classes = useStyles();
   return (
@@ -32,7 +35,25 @@ const AccordionCard = ({
           {accordionQuestion}
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body2">{accordionAnswer}</Typography>
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography variant="body2">{accordionAnswer}</Typography>
+            </Grid>
+            {ctaEnabled ? (
+              <Button
+                variant="contained"
+                size="medium"
+                component="a"
+                href={ctaLink}
+                color="textPrimary"
+                style={{ margin: '10px auto 0 auto' }}
+              >
+                {ctaText}
+              </Button>
+            ) : (
+              ''
+            )}
+          </Grid>
         </AccordionDetails>
       </Accordion>
     </Grid>

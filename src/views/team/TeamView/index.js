@@ -15,7 +15,9 @@ const TeamView = () => {
   return (
     <Page className={classes.root} title="Our Team">
       <Team />
+      {/* 
       <BoardTeam />
+      */}
       <Footer />
     </Page>
   );
